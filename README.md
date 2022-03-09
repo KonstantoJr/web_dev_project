@@ -1,5 +1,6 @@
 # internet_programming_project
- learn better git
+
+learn better js
 *work with git
 *frontend (JS , HTML , CSS)
-*backend (JS)
+\*backend (JS)
