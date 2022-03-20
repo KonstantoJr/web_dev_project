@@ -10,4 +10,5 @@ To do
 Questions
 1. Payments?
 2. In case of cinema do we need a seat selector
-3.
+3. Sort by date or by theme
+4. 
