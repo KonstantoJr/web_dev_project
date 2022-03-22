@@ -6,7 +6,7 @@ The following repo is a project for the course
 ```
 Students:
 ```
-Konstantinos Konstantopoulos
+Konstantopoulos Konstantinos
 Kontos Panagiotis
 ```
 ## Descriptio
