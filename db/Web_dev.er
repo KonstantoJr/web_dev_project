@@ -1,0 +1,20 @@
+
+  # Entities 
+   
+  [Event]  {bgcolor:white}
+    *Id
+    Price
+    Location
+    Support phone
+    Date
+    Seats
+   
+  [Admin]  {bgcolor:white}
+    Username
+    *Id
+    Password
+   
+  # Relationships
+   
+  Event 1--* Admin
+  Event *--* Admin
