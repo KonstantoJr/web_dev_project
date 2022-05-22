@@ -39,7 +39,7 @@ const routes = require('./routes/reservation-routes');
 // handlebars.create({ defaultLayout: 'layouts/main.hbs' });
 // app.engine('handlebars', handlebars.engine({ defaultLayout: "layouts/main.hbs" }));
 
-app.get('/', (req, res) => res.render('home', { layout: 'layouts/main', style: "home.css", title: "Home" }))
+app.get('/', (req, res) => res.render('home', { layout: 'layouts/main', style: "home.css", title: "Home", script: "home.js" }))
 
 
 
