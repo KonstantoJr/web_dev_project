@@ -38,3 +38,5 @@ npm install pg
 npm install dotenv
 npm init -y
 ```
+
+After installing the above packages run ```npm run debug``` and go to http://localhost:3000/
