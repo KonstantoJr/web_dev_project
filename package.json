@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "hbs": "^4.2.0",
+    "nodemon": "^2.0.16",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "pg": "^8.7.3"
+  },
+  "name": "web_dev_project",
+  "description": "The following repo is a project for the course ``` Προγραμματισμός Διαδικτύου (ECE_ΓΚ802) ``` Students: ``` Konstantopoulos Konstantinos Kontos Panagiotis ``` ## Description Website for making reservations at cultural events (e.g. theatrical plays, concerts etc.)",
+  "version": "1.0.0",
+  "main": "start.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "debug": "nodemon --inspect ./start.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KonstantoJr/web_dev_project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KonstantoJr/web_dev_project/issues"
+  },
+  "homepage": "https://github.com/KonstantoJr/web_dev_project#readme"
+}

@@ -23,3 +23,20 @@ Website for making reservations at cultural events
     1. Payments?
     2. In case of cinema do we need a seat selector
     3. Sort by date or by theme 
+
+Modules needed to run
+```
+npm install -g nodemon
+npm install hbs
+npm install bcrypt
+npm install passport
+npm install passport-local
+npm install express
+npm install express-session
+npm install express-handlebars
+npm install pg
+npm install dotenv
+npm init -y
+```
+
+After installing the above packages run ```npm run debug``` and go to http://localhost:3000/
