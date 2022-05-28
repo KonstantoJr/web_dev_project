@@ -1,0 +1,41 @@
+<div class="hero">
+    <div class="form-box">
+        <div class="button-box">
+            <div id="btn"></div>
+            <button type="button" class="toggle-btn" id="logexh">Log In</button>
+            <button type="button" class="toggle-btn" id="regexh">Register</button>
+        </div>
+        <form id="login" class="input-group" action="/users/login" method="POST">
+            <div id="error-msg">
+                {{#if emsg1}}
+                {{#each emsg1}}
+                <li>{{this.message}}</li>
+                {{/each}}
+                {{/if}}
+            </div>
+            <input name='email' type="text" class="input-field" placeholder="Email" required>
+            <input name='password' type="password" class="input-field" placeholder="Password" required>
+            <input type="checkbox" class="check-box"><span>Remember Password</span>
+            <button type="submit" class="submit-btn" value='Login'>Log in</button>
+        </form>
+        <form id="register" class="input-group" action="/users/register" method="POST"
+            enctype="application/x-www-form-urlencoded">
+            <div id="error-msg">{{#if emsg2}}
+                {{#each emsg2}}
+                <li>{{this.message}}</li>
+                {{/each}}
+                {{/if}}
+            </div>
+            <input name='username' type="text" id="username" class="input-field" placeholder="Username" required>
+            <input name='email' type="email" id="email" class="input-field" placeholder="Email" required>
+            <input name='password' type="password" id="password" class="input-field" placeholder="Password" required>
+            <input name='passwordConf' type="password" id="passwordConf" class="input-field"
+                placeholder="Confirm Password" required>
+            <input type="checkbox" id="checkbox" class="check-box" required><span>I agree to the terms &
+                conditions</span>
+            <button type="submit" class="submit-btn" value="Register">Register</button>
+        </form>
+    </div>
+</div>
+
+<script src="/src/login.js" async> </script>
