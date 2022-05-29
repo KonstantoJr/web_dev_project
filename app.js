@@ -47,6 +47,10 @@ app.route('/login').get((req, res) => {
     res.render('login', { layout: 'layouts/main', style: "login.css", title: "Login", script: "login.js" })
 })
 
+app.route('/searchText').get((req,res) => {
+    res.render('search', { layout: 'layouts/main', style: "home.css", title: "Search", script: "home.js" })
+})
+
 // app.post(
 //     "/users/login",
 //     passport.authenticate("local", {

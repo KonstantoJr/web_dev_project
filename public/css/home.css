@@ -38,51 +38,92 @@ div.topnav {
     float: right;
 }
 
-/* Style the input field inside the navbar */
-.topnav input[type=text] {
-    padding: 6px;
-    margin-top: 8px;
-    font-size: 17px;
-    border: none;
-    width: 150px;
-    /* adjust as needed (as long as it doesn't break the topnav) */
+
+ul.topnav li {
+    float: left;
+    border-right: 1px solid #bbb;
+
 }
 
-/* Style the button inside the input container */
-.topnav .login-container button {
+ul.topnav li:last-child {
+    border-right: none;
+}
+
+ul.topnav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+
+ul.topnav li a:hover:not(.active) {
+    background-color: #ddd;
+    color: black;
+}
+
+ul.topnav li a.active {
+    background-color: #2196F3;
+    color: white;
+}
+
+ul.topnav li input[type=text] {
+    border: none;
+    float: center;
+    border-left: 3px solid rgb(0, 0, 0);
+    padding: 7.5px;
+    margin-top: 5px;
+    font-size: 18.5px;
+}
+
+ul.topnav li button {
+    float: left;
+    padding: 4.5px;
+    margin-top: 4.5px;
+    margin-right: 0px;
+    border: none;
+}
+
+.topnav li a.button {
     float: right;
-    padding: 6px;
-    margin-top: 8px;
-    margin-right: 16px;
-    background: #ddd;
-    font-size: 17px;
+    text-decoration: underline;
+    margin-top: auto;
     border: none;
-    cursor: pointer;
+    font-size: 17px;
 }
 
-.topnav .login-container button:hover {
-    background: #ccc;
+ul.topnav li.right {
+    float: right;
 }
 
-/* Add responsiveness - On small screens, display the navbar vertically instead of horizontally */
 @media screen and (max-width: 600px) {
-    .topnav .login-container {
+
+
+    ul.topnav li {
         float: none;
+        /* display: block; */
+        text-align: center;
+        /* width: 100%; */
+        /* margin: 0; */
+        /* padding: 14px; */
     }
 
-    .topnav a,
-    .topnav input[type=text],
-    .topnav .login-container button {
-        float: none;
-        display: block;
-        text-align: left;
-        width: 100%;
-        margin: 0;
-        padding: 14px;
-    }
-
-    .topnav input[type=text] {
-        border: 1px solid #ccc;
+    ul.topnav li input[type=text] {
+        margin-top: 5px;
+        font-size: 18.5px;
+        border-left: 3px solid rgb(0, 0, 0);
     }
 }
 
