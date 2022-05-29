@@ -2,13 +2,6 @@
     box-sizing: border-box;
 }
 
-/* Style the navbar */
-div.topnav {
-    overflow: hidden;
-    position: sticky;
-    background-color: #e9e9e9;
-    /* padding-bottom: 10px; */
-}
 
 /* Navbar links */
 .topnav a {
@@ -50,7 +43,7 @@ ul.topnav li:last-child {
 }
 
 ul.topnav {
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     width: 100%;
     list-style-type: none;
