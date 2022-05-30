@@ -50,6 +50,9 @@ app.route('/login').get((req, res) => {
 app.route('/searchText').get((req,res) => {
     res.render('search', { layout: 'layouts/main', style: "home.css", title: "Search", script: "home.js" })
 })
+app.route('/event').get((req, res) => {
+    res.render('event', { layout: 'layouts/main', style: "event.css", title: "Event", script: "event.js" })
+})
 
 // app.post(
 //     "/users/login",

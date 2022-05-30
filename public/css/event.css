@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+}
+
+
+  
+  .manimg {
+      display: block;
+      float: center;
+      padding-left: 30px;
+      width:80%;
+      height:200px;
+  }
+  
+  .info {
+      position: relative;
+      display: block;
+      z-index: 3;
+      border-bottom: 1px solid #dbdbdb;
+  
+  }
+  .event_title {
+      display: inline-block;
+      text-align: center;
+      padding-left: 30px;
+      width: 50%;
+      height: 10px;
+  
+  }
+  .event_info{
+      display: inline-block;
+      padding-left: 10px;
+      width: 15%;
+      height: 10px;
+  }
+  .event_reservation {
+      display: inline-block;
+      padding-left: 10px;
+      width: 15%;
+      height:10px;
+  }
+  .details_menu dl {
+      display: block;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+  }
+  .details_menu dt     {
+      float: left;
+      border-top: 0;
+      margin: 0 20px -1px 0;
+      color: #a1a4aa;
+      padding: 0 30px 15px 30px;
+      transition: all .1s ease-in;
+      border-bottom: 3px solid transparent;
+      display: flex;
+      align-items: center;
+      font-size: 17px;
+  }
+  
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column_foto, .column_description {
+      width: 100%;
+    }
+  }
