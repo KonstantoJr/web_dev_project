@@ -36,6 +36,8 @@ npm install express-session
 npm install express-handlebars
 npm install pg
 npm install dotenv
+npm install cookie-parser
+npm install connect-sqlite3
 npm init -y
 ```
 

@@ -1,10 +1,25 @@
 const express = require('express')
+const handlebars = require('express-handlebars');
+const passport = require('passport');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+
+
+const SQLiteStore = require('connect-sqlite3')(session); // store for sessions
+
+
+require('dotenv').config();
+
 const app = express()
-const session = require('express-session')
+const index_router = require('./routes/index.js');
+
+app.use(express.static(__dirname + '/public'));
 
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
+app.use(cookieParser());
+
 app.use(session({
     secret: 'secret',
     resave: false,
@@ -15,51 +30,20 @@ app.use(session({
     }
 }));
 
-// const passport = require("passport")
-
-
-// const initializePassport = require("./passportConfig");
-
-// initializePassport(passport);
-
-// app.use(passport.initialize());
-// app.use(passport.session())
-
-// const dbClient = require("./dbconfig");
-
-const hbs = require('hbs');
+app.engine('hbs', handlebars.engine({
+    extname: '.hbs'
+}));
 app.set('view engine', 'hbs')
-app.set('views', 'views/')
-app.use(express.static(__dirname + '/public'));
+app.set('views', './views')
 
-const routes = require('./routes/reservation-routes');
+app.use('/', index_router);
 
 
-// app.use('/', routes);
-// handlebars.create({ defaultLayout: 'layouts/main.hbs' });
-// app.engine('handlebars', handlebars.engine({ defaultLayout: "layouts/main.hbs" }));
-
-app.get('/', (req, res) => res.render('home', { layout: 'layouts/main', style: "home.css", title: "Home", script: "home.js" }))
-app.route('/').get((req, res) => {
-    res.render('home', { layout: 'layouts/main', style: "home.css", title: "Home", script: "home.js" })
-})
-app.route('/login').get((req, res) => {
-    res.render('login', { layout: 'layouts/main', style: "login.css", title: "Login", script: "login.js" })
-})
-
-app.route('/searchText').get((req,res) => {
-    res.render('search', { layout: 'layouts/main', style: "home.css", title: "Search", script: "home.js" })
-})
-app.route('/event').get((req, res) => {
-    res.render('event', { layout: 'layouts/main', style: "event.css", title: "Event", script: "event.js" })
-})
-
-// app.post(
-//     "/users/login",
-//     passport.authenticate("local", {
-//         successRedirect: "/users/dashboard",
-//         failureRedirect: "/users/login"
-//     })
-// );
+// app.route('/searchText').get((req, res) => {
+//     res.render('search', { layout: 'layouts/main', style: "home.css", title: "Search", script: "home.js" })
+// })
+// app.route('/event').get((req, res) => {
+//     res.render('event', { layout: 'layouts/main', style: "event.css", title: "Event", script: "event.js" })
+// })
 
 module.exports = app;
