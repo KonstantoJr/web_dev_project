@@ -1,15 +1,63 @@
 <ul class="topnav">
-      <li><a class="active" href="#home">Home</a> </li>
-      <li><a href="#news">News</a> </li>
-      <li><a href="#contact">Contact</a> </li>
-      <li><a href="#about">About</a> </li>
-      <li class= "right" ><a href="/login" class="button">Log in/ Sign in</a> </li>
-      <form method="GET" action="searchText">
-      <li class= "right"> <Button inverse icon type="submit">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-          <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
-        </svg>
-        </Button>
-      <input type="text" name="searchText" id="searchBox" placeholder="Search.."></li>
-      </form>
-    </ul>
+    <li><a class=" active" href="#home">Home</a> </li>
+    <li><a href="#news">News</a> </li>
+    <li><a href="#contact">Contact</a> </li>
+    <li><a href="#about">About</a> </li>
+    <li class="right"><a href="/login" class="button">Log in/ Sign in</a> </li>
+    <form method="GET" action="searchText">
+        <li class="right"> <Button inverse icon type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                    <path
+                        d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                </svg>
+            </Button>
+            <input type="text" name="searchText" id="searchBox" placeholder="Search..">
+        </li>
+    </form>
+</ul>
+
+<div class="carousel">
+    <ol class="carousel__viewport">
+        <li id="carousel__slide1" tabindex="0" class="carousel__slide">
+            <div class="carousel__snapper">
+                <a href="#carousel__slide4" class="carousel__prev">Go to last slide</a>
+                <a href="#carousel__slide2" class="carousel__next">Go to next slide</a>
+            </div>
+        </li>
+        <li id="carousel__slide2" tabindex="0" class="carousel__slide">
+            <div class="carousel__snapper"></div>
+            <a href="#carousel__slide1" class="carousel__prev">Go to previous slide</a>
+            <a href="#carousel__slide3" class="carousel__next">Go to next slide</a>
+        </li>
+        <li id="carousel__slide3" tabindex="0" class="carousel__slide">
+            <div class="carousel__snapper"></div>
+            <a href="#carousel__slide2" class="carousel__prev">Go to previous slide</a>
+            <a href="#carousel__slide4" class="carousel__next">Go to next slide</a>
+        </li>
+        <li id="carousel__slide4" tabindex="0" class="carousel__slide">
+            <div class="carousel__snapper"></div>
+            <a href="#carousel__slide3" class="carousel__prev">Go to previous slide</a>
+            <a href="#carousel__slide1" class="carousel__next">Go to first slide</a>
+        </li>
+    </ol>
+    <aside class="carousel__navigation">
+        <ol class="carousel__navigation-list">
+            <li class="carousel__navigation-item">
+                <a href="#carousel__slide1" class="carousel__navigation-button">Go to slide 1</a>
+            </li>
+            <li class="carousel__navigation-item">
+                <a href="#carousel__slide2" class="carousel__navigation-button">Go to slide 2</a>
+            </li>
+            <li class="carousel__navigation-item">
+                <a href="#carousel__slide3" class="carousel__navigation-button">Go to slide 3</a>
+            </li>
+            <li class="carousel__navigation-item">
+                <a href="#carousel__slide4" class="carousel__navigation-button">Go to slide 4</a>
+            </li>
+        </ol>
+    </aside>
+</div>
+<div class="description">
+    <p> test</p>
+</div>
+<script src="/src/home.js" async></script>
