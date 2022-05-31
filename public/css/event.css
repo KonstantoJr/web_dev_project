@@ -2,74 +2,113 @@
     box-sizing: border-box;
 }
 
-
-
-.manimg {
+.event_page {
     display: block;
-    float: center;
-    padding-left: 30px;
-    width: 80%;
-    height: 200px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid red;
 }
 
-.info {
-    position: relative;
+.img_box {
     display: block;
-    z-index: 3;
-    border-bottom: 1px solid #dbdbdb;
+    height: 300px;;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    
+}
+  .mainimg {
+      display: block;
+      width: 100%;
+      height:100%;
+  }
+  
+  .info {
+      position: relative;
+      display: block;
+      height: 100px;;
+      margin-left: auto;
+      margin-right: auto;
+      /* z-index: 3; */
+      border-bottom: 1px solid #dbdbdb;
+  
+  }
+  .event_title {
+      display: inline-block;
+      padding-left: 5px;
+      padding-bottom: 10px;
+      width: 50%;
+      height: 90%;
+      overflow-wrap: break-word;
+      
+  
+  }
+  .event_info{
+      display: inline-block;
+      padding-left: 10px;
+      width: 29%;
+      height: 90%;
+      position: absolute;
+      top: 15%;
+  }
+ 
+  .event_reservation {
+      display: block;
+      float: right;
+      padding-left: 10px;
+      width: 19%;
+      margin-top: auto;
+      margin-bottom: auto;
+      height:100%;
+      padding-top: 2%;
+      padding-bottom: 2%;
+  }
+  .btn_reservation {
+      display: block;
+      position: relative;
+      background-color: rgb(47, 230, 47);
+      width: 80%;
+      height: 100%;
+      
+      
 
+
+  }
+  .details_menu dl {
+      display: block;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+  }
+  .details_menu dt     {
+      float: left;
+      color: #014ee9;
+      padding: 10px 30px 10px 30px;
+      border-bottom: 3px solid transparent;
+      display: flex;
+      align-items: center;
+      font-size: 17px;
+  }
+  
+  
+.description {
+    z-index: 0;
 }
 
-.event_title {
-    display: inline-block;
-    text-align: center;
-    padding-left: 30px;
-    width: 50%;
-    height: 10px;
-
+.sysntelestes {
+    z-index: 1;
 }
 
-.event_info {
-    display: inline-block;
-    padding-left: 10px;
-    width: 15%;
-    height: 10px;
-}
-
-.event_reservation {
-    display: inline-block;
-    padding-left: 10px;
-    width: 15%;
-    height: 10px;
-}
-
-.details_menu dl {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-}
-
-.details_menu dt {
-    float: left;
-    border-top: 0;
-    margin: 0 20px -1px 0;
-    color: #a1a4aa;
-    padding: 0 30px 15px 30px;
-    transition: all .1s ease-in;
-    border-bottom: 3px solid transparent;
-    display: flex;
-    align-items: center;
-    font-size: 17px;
+.diorganotis {
+    z-index: 2;
 }
 
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-
-    .column_foto,
-    .column_description {
-        width: 100%;
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column_foto, .column_description {
+      width: 100%;
     }
-}
+  }
