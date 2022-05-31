@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS `event`;
 CREATE TABLE 'event'(
     'id' INTEGER PRIMARY KEY AUTOINCREMENT,
     'name' TEXT NOT NULL,
@@ -10,14 +11,14 @@ CREATE TABLE 'event'(
     'take_part' TEXT NOT NULL,
     'phone' TEXT NOT NULL,
     FOREIGN KEY('admin_id') REFERENCES 'admin'('id') ON DELETE CASCADE
-)
-
+);
+DROP TABLE IF EXISTS `admin`;
 CREATE TABLE 'admin'(
     'id' INTEGER PRIMARY KEY AUTOINCREMENT,
     'username' TEXT NOT NULL,
     'password' TEXT NOT NULL
-)
-
+);
+DROP TABLE IF EXISTS `reservation`;
 CREATE TABLE 'reservation'(
     'id' INTEGER PRIMARY KEY AUTOINCREMENT,
     'event_id' INTEGER NOT NULL,
@@ -26,5 +27,5 @@ CREATE TABLE 'reservation'(
     'phone' TEXT NOT NULL,
     'number_of_seats' INTEGER NOT NULL,
     'email' TEXT NOT NULL,
-    FOREIGN KEY('event_id') REFERENCES 'event'('id') ON DELETE CASCADE,
-)
+    FOREIGN KEY('event_id') REFERENCES 'event'('id') ON DELETE CASCADE
+);

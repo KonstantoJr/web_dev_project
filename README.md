@@ -42,3 +42,9 @@ npm init -y
 ```
 
 After installing the above packages run ```npm run debug``` and go to http://localhost:3000/
+
+## DATABASE CREATION
+CD into folder sqlite found under model and run the following command
+```
+sqlite3 database.sqlite < database.sql
+```
