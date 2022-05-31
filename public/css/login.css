@@ -9,7 +9,7 @@
   height: 100%;
   width: 100%;
   /* background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/login_bg_2); */
-  background: black;
+  background: rgb(154, 97, 97);
   background-position: center;
   background-size: cover;
   position: absolute;
@@ -18,17 +18,17 @@
 
 
 .form-box {
-  width: 380px;
+  width: 400px;
   /* height: 480px; */
   /* width: 25%; */
   height: 60%;
   position: relative;
   margin: 13% auto;
-  background: rgb(63, 104, 128);
+  background: rgb(40, 126, 175);
   padding: 5px;
   overflow: hidden;
   border-radius: 10%;
-  min-height: 400px;
+  min-height: 420px;
 }
 
 .example::-webkit-scrollbar {
@@ -71,7 +71,7 @@
 
 
 .social-icons {
-  margin: 30px auto;
+  margin: 20px auto;
   text-align: center;
 }
 
@@ -91,7 +91,7 @@
   width: 280px;
   transition: .5s;
   /* background: green; */
-  top: 30%;
+  top: 25%;
 }
 
 
@@ -109,8 +109,8 @@
 
 
 .submit-btn {
-  width: 85%;
-  padding: 10px 30px;
+  width: 80%;
+  padding: 10px 30px 10px;
   cursor: pointer;
   display: block;
   margin: auto;
@@ -130,7 +130,7 @@
 span {
   color: #777;
   font-size: 12px;
-  bottom: 68px;
+  bottom: 64px;
   position: absolute;
 }
 
@@ -154,7 +154,7 @@ span {
 
 
 body:after {
-  content: "beta";
+  /* content: "beta"; */
   position: fixed;
   width: 80px;
   height: 25px;

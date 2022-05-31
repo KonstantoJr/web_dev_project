@@ -46,6 +46,7 @@
   }
   .event_info{
       display: inline-block;
+      font-size: large;
       padding-left: 10px;
       width: 29%;
       height: 90%;
