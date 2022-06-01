@@ -5,10 +5,13 @@ CREATE TABLE 'event'(
     'description' TEXT NOT NULL,
     'total_seats' INTEGER NOT NULL,
     'organizer' TEXT NOT NULL,
+    'duration' , INT NOT NULL,
     'admin_id' INTEGER NOT NULL,
     'start_date' TEXT NOT NULL,
-    'img' ΤΕΧΤ NOT NULL,
-    'take_part' TEXT NOT NULL,
+    'start_time' TEXT NOT NULL,
+    'img' TEXT NOT NULL,
+    'contributor' TEXT NOT NULL,
+    'price' , INTEGER NOT NULL,
     'phone' TEXT NOT NULL,
     FOREIGN KEY('admin_id') REFERENCES 'admin'('id') ON DELETE CASCADE
 );
