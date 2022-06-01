@@ -1,7 +1,23 @@
 'use strict';
 const db = require('better-sqlite3')
 const bcrypt = require('bcrypt');
-const sql = new db('database.sqlite', { fileMustExist: true });
+const fs = require('fs');
+const sql = new db('database.sqlite');
+
+let data = fs.readFileSync('./database.sql' , 'utf8');
+
+data = data.split(';');
+// console.log(data)
+
+for (let i of data){
+    // console.log(i + ';')
+    if (i === ""){
+        continue
+    }
+    let stmt = sql.prepare(i + ';');
+    stmt.run();
+}
+
 
 
 // Populate admin table with 2 admin users
@@ -24,4 +40,11 @@ for (let i = 0; i < simpleUsers.length; i++) {
     stmt.run(simpleUsers[i], simpleUsersEmail[i], hashedPassword);
 }
 
+var eventName = ["poutses", "peoi"];
+
+for (let i = 0; i < eventName.length; i++) {
+    
+    let stmt = sql.prepare("INSERT INTO event VALUES (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?)");
+    // stmt.run(eventName[i]);
+}
 
