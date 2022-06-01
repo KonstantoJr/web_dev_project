@@ -10,7 +10,7 @@ router.use((req, res, next) => {
 
 
 router.get('/', async (req, res) => {
-    res.render('event', { layout: 'main', style: "event.css", title: "Event", script: "event.js" })
+    res.render('event', { layout: 'main', style: "event.css", title: "Event", script: "event.js" , event:"test"})
 });
 
 

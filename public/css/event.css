@@ -96,14 +96,17 @@
   
 .description {
     z-index: 0;
+    display: block;
 }
 
-.sysntelestes {
+.castCrew {
     z-index: 1;
+    display: None;
 }
 
-.diorganotis {
+.organizer {
     z-index: 2;
+    display: None;
 }
 
 

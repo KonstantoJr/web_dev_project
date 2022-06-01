@@ -7,7 +7,7 @@ CREATE TABLE 'event'(
     'organizer' TEXT NOT NULL,
     'admin_id' INTEGER NOT NULL,
     'start_date' TEXT NOT NULL,
-    'img' BLOB NOT NULL,
+    'img' ΤΕΧΤ NOT NULL,
     'take_part' TEXT NOT NULL,
     'phone' TEXT NOT NULL,
     FOREIGN KEY('admin_id') REFERENCES 'admin'('id') ON DELETE CASCADE
