@@ -10,7 +10,8 @@ router.use((req, res, next) => {
 
 
 router.get('/', async (req, res) => {
-    res.render('events', { layout: 'bootstrap', style: "events.css", title: "Events", script: "events.js" })
+    // console.log(req.session)
+    res.render('events', { layout: 'bootstrap', style: "events.css", title: "Events", script: "events.js",userId: req.session.loggedUserId })
 });
 
 
