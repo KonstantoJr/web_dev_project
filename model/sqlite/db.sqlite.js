@@ -2,7 +2,7 @@
 
 let sqlite3 = require('sqlite3');
 
-let db = new sqlite3.cached.Database('./model/sqlite/db.sqlite', (err) => {
+let db = new sqlite3.cached.Database('./model/sqlite/database.sqlite', (err) => {
     if (err) {
         if (err) throw err;
     }
