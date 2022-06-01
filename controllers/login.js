@@ -84,7 +84,7 @@ exports.checkAuthenticated = function (req, res, next) {
     else {
         //Ο χρήστης δεν έχει ταυτοποιηθεί, αν απλά ζητάει το /login ή το register δίνουμε τον
         //έλεγχο στο επόμενο middleware που έχει οριστεί στον router
-        if ((req.originalUrl === "/login") || (req.originalUrl === "/register")) {
+        if ((req.originalUrl === "/login/user") || (req.originalUrl === "/login/register")) {
             next()
         }
         else {
