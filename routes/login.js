@@ -10,9 +10,13 @@ router.use((req, res, next) => {
 
 
 router.get('/', async (req, res) => {
-
     res.render('login', { layout: 'main', style: "login.css", title: "Login", script: "login.js" })
 });
 
+router.post('/user', controller.checkAuthenticated, controller.doLogin);
 
-module.exports = router;
+router.post('/register', controller.checkAuthenticated, controller.doRegister);
+
+router.get('/logout', controller.checkAuthenticated, controller.doLogout);
+
+module.exports = router;    

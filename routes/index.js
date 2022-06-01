@@ -8,7 +8,6 @@ const loginRouter = require('./login.js');
 const eventRouter = require('./event.js');
 const formRouter = require('./form.js');
 const eventFormRouter = require('./eventForm.js');
-
 router.use((req, res, next) => {
     next();
 });
