@@ -18,7 +18,7 @@ CREATE TABLE 'event'(
 DROP TABLE IF EXISTS `admin`;
 CREATE TABLE 'admin'(
     'id' INTEGER PRIMARY KEY AUTOINCREMENT,
-    'username' TEXT NOT NULL,
+    'username' TEXT NOT NULL UNIQUE,
     'password' TEXT NOT NULL
 );
 DROP TABLE IF EXISTS `reservation`;
@@ -39,6 +39,6 @@ DROP TABLE IF EXISTS `user`;
 CREATE TABLE 'user'(
     'id' INTEGER PRIMARY KEY AUTOINCREMENT,
     'username' TEXT NOT NULL,
-    'password' TEXT NOT NULL,
+    'password' TEXT NOT NULL UNIQUE,
     'email' TEXT NOT NULL
 );
