@@ -1,18 +1,56 @@
+<div class="overlay"></div>
+
+<div class="popup"></div>
+
 <div class="form-popup" id="myForm">
   <form action="/" class="form-container">
-    <h1>Reservation</h1>
+    <h1 style="text-align: center;">Κράτηση</h1>
 
-    <label for="Name"><b>Name</b></label>
+    <div class="Details">
+    <label id="eventDetails">Έχετε επιλέξει κράτηση για την παράσταση " </label>
+    <label id="eventTitle"> Ο άρχοντας των δαχτυλιδιών </label>
+    <label id="eventDetails">" </label>
+    <br>
+    <div class="date">
+    <label id="date"><b>Ημερομηνία: </b></label>
+    <input type="date" id="eventDate" >
+    </div>
+    <div class="time">
+    <label id="time"><b>Ώρα εναρξης:  </b></label>
+    <label id="eventTime">21:30</label>
+    </div>
+    
+    
+    
+    <br>
+    </div>
+
+    <label for="Name"><b>Όνομα</b></label>
     <input type="text" placeholder="Enter your Name" name="name" required>
 
 
-    <label for="email"><b>Email Address</b></label>
+    <label for="email"><b>Email </b></label>
     <input type="text" placeholder="Enter Email" name="email" required>
 
-    <label for="Phone"><b>Phone</b></label>
+    <label for="Phone"><b>Τηλέφωνο</b></label>
     <input type="text" placeholder="Enter your phone" name="phone" required>
 
-    <button type="submit" class="btn">Submit</button>
-    <button type="button" class="btn cancel" onclick="closeForm()"> Cancel</button>
+    <div class="ticket">
+    <label for="ticket"><b>Εισητήριο</b></label>
+    <select class="ticket_type">
+    <option value="0">Κανονικό</option>
+    <option value="1">Φοιτητικό</option>
+    <option value="2">Πολύτεκνο</option>
+    <option value="3">Άτομα αμε ειδικές ανάγκες</option>
+    </select>
+    </div>
+
+    <div class="price">
+    <label id="price"><b>Τιμή: </b></label>
+    <label id="eventPrice"><b> 30€</b></label>
+    </div>
+
+    <button type="submit" class="btn">Ολοκλήρωση Κράτησης</button>
+    <button type="button" class="btn cancel" onclick="closeForm()"> Ακύρωση</button>
   </form>
 </div>

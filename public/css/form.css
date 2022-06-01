@@ -1,31 +1,94 @@
 * {
     box-sizing: border-box;
 }
+.overlay {
+  display: none;
+  opacity: 0;
+  background: rgba(0, 0, 0, .5);
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vw;
+  z-index: 100;
+  cursor: pointer;
+  transition: opacity .3s;
+}
+
+.popup {
+  display: none;
+  opacity: 0;
+  width: 50vh; height: 50vh;
+  min-width: 300px;
+  min-height: 300px;
+  position: fixed;
+  top: 25vh; left: 40%;
+  z-index: 101;
+  transition: opacity .3s;
+
+  background-color: white;
+  padding: 60px 20px 40px;
+  border-radius: 6px;
+}
+
+.form-popup {
+  display: block;
+  opacity: 1;
+}
+
 .form-container {
-    max-width: 300px;
-    padding: 10px;
-    background-color: white;
+    max-width: 600px;
+    padding: 15px;
+    background-color: rgb(131, 235, 226);
+    
+    position: relative;
+    margin: 13% auto;
+    border: 2px solid red;
+    border-radius: 8%;
   }
 
+  .Details {
+    background-color: rgb(217, 255, 4);
+    margin-bottom: 8px;
+    padding-top: 5px;
+  }
+
+  .date {
+    margin-top: 5px;
+    display: inline-block;
+  }
+  .time {
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 10px;
+  }
   
-.form-container input[type=text], .form-container input[type=password] {
+.form-container input[type=text]{
     width: 100%;
     padding: 15px;
-    margin: 5px 0 22px 0;
+    margin: 5px 0 20px 0;
     border: none;
     background: #f1f1f1;
   }
 
   /* When the inputs get focus, do something */
-.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+.form-container input[type=text]:focus{
     background-color: #ddd;
     outline: none;
   }
 
+  .ticket {
+    display: inline-block;
+      margin-bottom: 10px;
+
+  }
+  .price {
+    display: inline-block;
+    padding-left: 20px;
+  }
   /* Set a style for the submit/login button */
 .form-container .btn {
-    background-color: #04AA6D;
-    color: white;
+    background-color: #37ff00;
+    color: rgb(0, 0, 0);
     padding: 16px 20px;
     border: none;
     cursor: pointer;
@@ -36,7 +99,7 @@
 
   /* Add a red background color to the cancel button */
 .form-container .cancel {
-    background-color: red;
+    background-color: rgb(255, 0, 0);
   }
 
   .form-container .btn:hover, .open-button:hover {
