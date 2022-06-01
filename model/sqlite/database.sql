@@ -27,5 +27,15 @@ CREATE TABLE 'reservation'(
     'phone' TEXT NOT NULL,
     'number_of_seats' INTEGER NOT NULL,
     'email' TEXT NOT NULL,
-    FOREIGN KEY('event_id') REFERENCES 'event'('id') ON DELETE CASCADE
+    'user_id' INTEGER NOT NULL,
+    FOREIGN KEY('event_id') REFERENCES 'event'('id') ON DELETE CASCADE,
+    FOREIGN KEY('user_id') REFERENCES 'user'('id') ON DELETE CASCADE
+);
+
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE 'user'(
+    'id' INTEGER PRIMARY KEY AUTOINCREMENT,
+    'username' TEXT NOT NULL,
+    'password' TEXT NOT NULL,
+    'email' TEXT NOT NULL
 );
