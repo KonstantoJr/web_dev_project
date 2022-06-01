@@ -90,7 +90,8 @@ exports.checkAuthenticated = function (req, res, next) {
         else {
             //Στείλε το χρήστη στη "/login" 
             console.log("not authenticated, redirecting to /login")
-            res.redirect('/login');
+            errorMessage = { message: "Πρέπει να συνδεθείτε" };
+            res.render('login', { layout: 'main', style: "login.css", title: "Login", script: "login.js", loginError: errorMessage });
         }
     }
 }
