@@ -6,12 +6,10 @@
             <button type="button" class="toggle-btn" id="logexh">Log In</button>
             <button type="button" class="toggle-btn" id="regexh">Register</button>
         </div>
-        <form id="login" class="input-group" action="/users/login" method="POST">
+        <form id="login" class="input-group" action="/login/user" method="POST">
             <div id="error-msg">
-                {{#if emsg1}}
-                {{#each emsg1}}
-                <li>{{this.message}}</li>
-                {{/each}}
+                {{#if loginError}}
+                <li>{{loginError.message}}</li>
                 {{/if}}
             </div>
             <input name='email' type="text" class="input-field" placeholder="Email" required>
@@ -19,12 +17,10 @@
             <input type="checkbox" class="check-box"><span>Remember Password</span>
             <button type="submit" class="submit-btn" value='Login'>Log in</button>
         </form>
-        <form id="register" class="input-group" action="/users/register" method="POST"
+        <form id="register" class="input-group" action="/login/register" method="POST"
             enctype="application/x-www-form-urlencoded">
-            <div id="error-msg">{{#if emsg2}}
-                {{#each emsg2}}
-                <li>{{this.message}}</li>
-                {{/each}}
+            <div id="error-msg">{{#if registerError}}
+                <li>{{registerError.message}}</li>
                 {{/if}}
             </div>
             <input name='username' type="text" id="username" class="input-field" placeholder="Username" required>
