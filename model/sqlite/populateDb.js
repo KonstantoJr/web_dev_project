@@ -4,14 +4,14 @@ const bcrypt = require('bcrypt');
 const fs = require('fs');
 const sql = new db('database.sqlite');
 
-let data = fs.readFileSync('./database.sql' , 'utf8');
+let data = fs.readFileSync('./database.sql', 'utf8');
 
 data = data.split(';');
 // console.log(data)
 
-for (let i of data){
+for (let i of data) {
     // console.log(i + ';')
-    if (i === ""){
+    if (i === "") {
         continue
     }
     let stmt = sql.prepare(i + ';');
@@ -84,7 +84,7 @@ var contributors1 = 'Σκηνοθεσία: Βασίλης Μπισμπίκης \
 Παίζουν (αλφαβητικά): Ερατώ Αγγουράκη, Λευτέρης Αγουρίδας, Ελεονώρα Αντωνιάδου, Μπέττυ Βακαλίδου, Δημήτρης Γαλάνης, Γιανμάζ Ερντάλ, \n\
  Μάρα Ζαλώνη, Μάνος Καζαμίας, Διονύσης Κοκκοτάκης, Δημήτρης Παπάζογλου, Αγγέλα Πατσέλη, Γιώργος Σιδέρης, Τάσος Σωτηράκης, Στέλιος Τυριακίδης, Πουριά Χοσσεϊνί ';
 
- var contributors2 = 'Παίζουν: Νικήτας Τσακίρογλου, Μιχάλης Σαράντης, Αντίνοος Αλμπάνης, Θάνος Αλεξίου, Στέλιος Δημόπουλος, Μαρία Νεφέλη Δούκα, Τζένη Κόλλια, Φώτης Λαζάρου, Δάφνη Λιανάκη, Ευθύμης Ξυπολιτάς, Παναγιώτα Παπαδημητρίου, Αντώνης Τσιοτσιόπουλος, Κώστας Φυτίλης, Aντώνης Χρήστου\n\ \n\
+var contributors2 = 'Παίζουν: Νικήτας Τσακίρογλου, Μιχάλης Σαράντης, Αντίνοος Αλμπάνης, Θάνος Αλεξίου, Στέλιος Δημόπουλος, Μαρία Νεφέλη Δούκα, Τζένη Κόλλια, Φώτης Λαζάρου, Δάφνη Λιανάκη, Ευθύμης Ξυπολιτάς, Παναγιώτα Παπαδημητρίου, Αντώνης Τσιοτσιόπουλος, Κώστας Φυτίλης, Aντώνης Χρήστου\n\ \n\
 Μουσικοί επί σκηνής: Αθηνόδωρος Καρκαφίρης & Βαγγέλης Παρασκευαΐδης\n\ \n\ \n\ \n\
 ΤΑΥΤΟΤΗΤΑ ΠΑΡΑΣΤΑΣΗΣ\n\ \n\
 Σκηνοθεσία: Γιώργος Παλούμπης\n\ \n\
@@ -159,29 +159,29 @@ var contributors4 = "Μετάφραση: Γιώργος Μπλάνας\n\ \n\
 Social Media -Διαφήμιση: Renegade Media / Βασίλης Ζαρκαδούλας\n\ \n\
 Παραγωγή: ΘΕΑΤΡΟΧΩΡΟΣ ΕΕ";
 
-var eventName = ["ΚΟΚΚΙΝΑ ΦΑΝΑΡΙΑ", "ΜΑΤΩΜΕΝΑ ΧΩΜΑΤΑ","ΘΕΣΜΟΦΟΡΙΑΖΟΥΣΕΣ του Αριστοφάνη", "Μήδεια","Μήδεια"];
-var eventDescription = [perigrafi1,perigrafi2,perigrafi3,perigrafi4,perigrafi4];
-var eventTotal_seats = [100,150,180,200,120];
-var eventOrganizer = ["Ομάδα Cartel","GR ENTERTAINMENT WORLD LTD","ΑΦΟΙ ΤΑΓΑΡΗ ΟΕ","ΘΕΑΤΡΟΧΩΡΟΣ ΕΤΕΡΟΡΡΥΘΜΗ ΕΤΑΙΡΙΑ","ΘΕΑΤΡΟΧΩΡΟΣ ΕΤΕΡΟΡΡΥΘΜΗ ΕΤΑΙΡΙΑ"];
-var eventDuration = [120,160,90,100,130];
-var eventAdmin_id = [1,1,1,2,2];
-var eventStart_date = ["10/06/2022","12/06/2022","14/06/2022","15/06/2022","20/06/2022"];
-var eventStart_time = ["20:00","22:00","21:30","20:30","21:00",];
+var eventName = ["ΚΟΚΚΙΝΑ ΦΑΝΑΡΙΑ", "ΜΑΤΩΜΕΝΑ ΧΩΜΑΤΑ", "ΘΕΣΜΟΦΟΡΙΑΖΟΥΣΕΣ του Αριστοφάνη", "Μήδεια", "Μήδεια"];
+var eventDescription = [perigrafi1, perigrafi2, perigrafi3, perigrafi4, perigrafi4];
+var eventTotal_seats = [100, 150, 180, 200, 120];
+var eventOrganizer = ["Ομάδα Cartel", "GR ENTERTAINMENT WORLD LTD", "ΑΦΟΙ ΤΑΓΑΡΗ ΟΕ", "ΘΕΑΤΡΟΧΩΡΟΣ ΕΤΕΡΟΡΡΥΘΜΗ ΕΤΑΙΡΙΑ", "ΘΕΑΤΡΟΧΩΡΟΣ ΕΤΕΡΟΡΡΥΘΜΗ ΕΤΑΙΡΙΑ"];
+var eventDuration = [120, 160, 90, 100, 130];
+var eventAdmin_id = [1, 1, 1, 2, 2];
+var eventStart_date = ["10/06/2022", "12/06/2022", "14/06/2022", "15/06/2022", "20/06/2022"];
+var eventStart_time = ["20:00", "22:00", "21:30", "20:30", "21:00",];
 var eventImg = ["https://www.viva.gr/tickets/getattachment/c7fceeb3-d36c-4fd2-bda7-9eb5a6233816/%ce%9a%ce%9f%ce%9a%ce%9a%ce%99%ce%9d%ce%91-%ce%a6%ce%91%ce%9d%ce%91%ce%a1%ce%99%ce%9118c2e6f2-aea8-4c5e-b24f-213e7cc29c1.png",
-"https://www.viva.gr/tickets/getattachment/791aac50-97da-4248-bdd3-5c70c390b211/%ce%9c%ce%91%ce%a4%ce%a9%ce%9c%ce%95%ce%9d%ce%91-%ce%a7%ce%a9%ce%9c%ce%91%ce%a4%ce%91c477ae9d-87eb-4766-ba06-a3166f8b5da.png",
-"https://www.viva.gr/tickets/getattachment/09d430ed-d622-45a4-a63f-cff62da7c61e/%ce%98%ce%95%ce%a3%ce%9c%ce%9f%ce%a6%ce%9f%ce%a1%ce%99%ce%91%ce%96%ce%9f%ce%a5%ce%a3%ce%95%ce%a3-%cf%84%ce%bf%cf%85-%ce%91%cf%81%ce%b9%cf%83%cf%84%ce%bf%cf%86%ce%b1%ce%bd%ce%b78d157427-c5c0-411d-.png",
-"https://www.viva.gr/tickets/getattachment/9030b144-3dad-4431-913b-c7482d0dad71/%ce%9c%ce%b7%ce%b4%ce%b5%ce%b9%ce%b18f521818-f20c-4722-9a78-cfe1293da6d5.png",
-"https://www.viva.gr/tickets/getattachment/9030b144-3dad-4431-913b-c7482d0dad71/%ce%9c%ce%b7%ce%b4%ce%b5%ce%b9%ce%b18f521818-f20c-4722-9a78-cfe1293da6d5.png"];
-var eventContributor = [ contributors1,contributors2,contributors1,contributors4,contributors4];
-var eventPrice = [15,20,18,13,10];
-var eventPhone = ["2610123456","2610123456","2610123456","2610123456","2610123456",];
+    "https://www.viva.gr/tickets/getattachment/791aac50-97da-4248-bdd3-5c70c390b211/%ce%9c%ce%91%ce%a4%ce%a9%ce%9c%ce%95%ce%9d%ce%91-%ce%a7%ce%a9%ce%9c%ce%91%ce%a4%ce%91c477ae9d-87eb-4766-ba06-a3166f8b5da.png",
+    "https://www.viva.gr/tickets/getattachment/09d430ed-d622-45a4-a63f-cff62da7c61e/%ce%98%ce%95%ce%a3%ce%9c%ce%9f%ce%a6%ce%9f%ce%a1%ce%99%ce%91%ce%96%ce%9f%ce%a5%ce%a3%ce%95%ce%a3-%cf%84%ce%bf%cf%85-%ce%91%cf%81%ce%b9%cf%83%cf%84%ce%bf%cf%86%ce%b1%ce%bd%ce%b78d157427-c5c0-411d-.png",
+    "https://www.viva.gr/tickets/getattachment/9030b144-3dad-4431-913b-c7482d0dad71/%ce%9c%ce%b7%ce%b4%ce%b5%ce%b9%ce%b18f521818-f20c-4722-9a78-cfe1293da6d5.png",
+    "https://www.viva.gr/tickets/getattachment/9030b144-3dad-4431-913b-c7482d0dad71/%ce%9c%ce%b7%ce%b4%ce%b5%ce%b9%ce%b18f521818-f20c-4722-9a78-cfe1293da6d5.png"];
+var eventContributor = [contributors1, contributors2, contributors3, contributors4, contributors4];
+var eventPrice = [15, 20, 18, 13, 10];
+var eventPhone = ["2610123456", "2610123456", "2610123456", "2610123456", "2610123456",];
 
 
 
 
 for (let i = 0; i < eventName.length; i++) {
-    
+
     let stmt = sql.prepare("INSERT INTO event VALUES (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    stmt.run(eventName[i], eventDescription[i],eventTotal_seats[i],eventOrganizer[i],eventDuration[i], eventAdmin_id[i], eventStart_date[i],eventStart_time[i], eventImg[i], eventContributor[i], eventPrice[i], eventPhone[i]);
+    stmt.run(eventName[i], eventDescription[i], eventTotal_seats[i], eventOrganizer[i], eventDuration[i], eventAdmin_id[i], eventStart_date[i], eventStart_time[i], eventImg[i], eventContributor[i], eventPrice[i], eventPhone[i]);
 }
 
