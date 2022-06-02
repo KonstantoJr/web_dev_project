@@ -1,98 +1,59 @@
 <div class="event_page">
-		<div class="img_box">
-			<img class="mainimg" src={{eventImg}}> </img>
+	<div class="img_box">
+		<img class="mainimg" src={{eventImg}}> </img>
+	</div>
+	<div class="info">
+		<div class="eventTitle">
+			<h2 style="text-align: center"> {{eventTitle}} </h2>
 		</div>
-		<div class="info">
-			<div class="eventTitle"> <h2 style="text-align: center"> {{eventTitle}}  </h2></div>
-			<div class="eventInfo"> 
-				<span id="eventDate"> Date: {{eventDate}} </span>
-				<br>
-				<p id="location">Theater: <a href="Royal Theater" id="eventTheater"> {{eventPlace}} </a></p>
-				
-			</div>
-			<div class="eventReservation">
-				<button type="button" class="btnReservation"> Κάντε Κράτηση</button>
-			</div>
+		<div class="eventInfo">
+			<span id="eventDate"> Date: {{eventDate}} </span>
+			<br>
+			<p id="eventTheater"> Theater: {{eventPlace}} </p>
+
 		</div>
-
-		<div class="details_menu">
-			
-			<dl>
-				<dt id="description"  > <a href="#description">Περιγραφή</a></dt>
-					
-				<dt id="castCrew"  > <a href="#castcrew"> Συντελεστές </a></dt>
-				<dt id="organizer"  > <a href="#organizer"> Διοργανωτής </a></dt>
-				<br><br>
-			</dl>
-			
-		</div>
-		<div class="placeholder_information">
-			<div id="description1" class="active">
-						<dd>
-						<p> perigrafi ths parastashs </p>
-						</dd>
-					</div>
-
-			<div id="castCrew1" class="">
-				<dd>
-					<strong> Ηθοποιοί</strong>
-					<p>abgd</p>
-					<p>abgd</p>
-					<p>abgd</p>
-					<p>abgd</p>
-					<p>abgd</p>
-					<p>abgd</p>
-					<p>abgd</p>
-					<p>abgd</p>
-					<p>abgd</p>
-					<p>abgd</p>
-					<p>abgd</p>
-					<p>abgd</p>
-					<p>abgd</p>
-					<p>abgd</p>
-					<p>abgd</p>
-					<p>abgd</p>
-					<p>abgd</p>
-					<p>abgd</p>
-					<p>abgd</p>
-					<p>abgd</p>
-				</dd>
-			</div>
-
-			<div id="organizer1" class="">
-				<dd>
-				<p>ME.AS.AE</p>
-				</dd>
-			</div>
+		<div class="eventReservation">
+			<button id="btnreservation" type="button" class="btnReservation"> Κάντε Κράτηση</button>
 		</div>
 	</div>
-	
-<script>
-document.getElementById("description").addEventListener("click",descActivation);
-	
-function descActivation() {
-	console.log("ada")
-    castCrew1.className= "";
-	organizer1.className= "";
-	description1.className ="active";
-}
-document.getElementById("castCrew").addEventListener("click",castActivation);
 
-function castActivation() {
-	organizer1.className = "";
-	description1.className = "";
-	castCrew1.className = "active";
-	
-}
-document.getElementById("organizer").addEventListener("click",orgActivation);
+	<div class="details_menu">
 
-function orgActivation() {
-    castCrew1.className = "";
-	description1.className ="";
-	organizer1.className = "active";
-	
-}
+		<dl>
+			<dt id="description"> Περιγραφή</a></dt>
+
+			<dt id="castCrew"> Συντελεστές </a></dt>
+			<dt id="organizer"> Διοργανωτής </a></dt>
+			<br><br>
+		</dl>
+
+	</div>
+	<div class="placeholder_information">
+		<div id="description1" class="active">
+			<dd>
+				{{#each eventDescription}}
+				<p> {{this}} </p>
+				{{/each}}
+			</dd>
+		</div>
+
+		<div id="castCrew1" class="">
+			<dd>
+				{{#each eventCast}}
+				<p> {{this}} </p>
+				{{/each}}
+			</dd>
+		</div>
+
+		<div id="organizer1" class="">
+			<dd>
+				{{#each eventOrganizer}}
+				<p> {{this}} </p>
+				{{/each}}
+			</dd>
+		</div>
+	</div>
+</div>
 
 
-</script>
-
+<script src="/src/event.js"></script>

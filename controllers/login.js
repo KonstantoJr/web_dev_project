@@ -10,14 +10,6 @@ if (process.env.NODE_ENV !== 'production') {
 let model = require(`../model/sqlite/model.js`);
 
 
-exports.showLogInForm = function (req, res) {
-    res.render('login-password', { model: process.env.MODEL });
-}
-
-exports.showRegisterForm = function (req, res) {
-    res.render('register-password', {});
-}
-
 exports.doRegister = function (req, res) {
     model.registerUser(req.body.username, req.body.password, (err, result, message) => {
         if (err) {

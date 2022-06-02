@@ -9,6 +9,16 @@ exports.connect = (callback) => {
     callback(null, true)
 }
 
+exports.getEventById = function (id, callback) {
+    const stmt = sql.prepare("SELECT name , description ,total_seats , organizer, duration , start_date , start_time , img , contributor , price , phone FROM event WHERE id = ? LIMIT 0, 1");
+    let events;
+    try {
+        events = stmt.all(id);
+    } catch (err) {
+        callback(err, null);
+    }
+    callback(null, events);
+}
 
 exports.findAdminbyUsernamePassword = (username, password, callback) => {
     //Φέρε μόνο μια εγγραφή (το LIMIT 0, 1) που να έχει username και password ίσο με username και password 
