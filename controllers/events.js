@@ -18,6 +18,7 @@ exports.getEvents = function (req, res) {
                 layout: 'bootstrap',
                 style: "events.css",
                 title: "Events",
+                userId: req.session.loggedUserId,
                 events: event
             })
         }

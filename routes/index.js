@@ -28,4 +28,8 @@ router.get('/', async (req, res) => {
     res.render('home', { layout: 'main', style: "home.css", title: "Home", script: "home.js" })
 });
 
+router.get('*', function (req, res) {
+    res.send('Sorry, this is an invalid URL.');
+});
+
 module.exports = router;

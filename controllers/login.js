@@ -43,11 +43,11 @@ exports.doLogin = function (req, res) {
                 if (match) {
                     //Θέτουμε τη μεταβλητή συνεδρίας "loggedUserId"
                     req.session.loggedUserId = user.id;
+                    req.session.accountType = 'admin';
                     //Αν έχει τιμή η μεταβλητή req.session.originalUrl, αλλιώς όρισέ τη σε "/" 
-                    const redirectTo = req.session.originalUrl || "/";
-                    // res.redirect("/");
                     console.log("successful login")
-                    res.redirect(redirectTo);
+                    console.log(req.session);
+                    res.render('home', { layout: 'main', style: "home.css", title: "Home", script: "home.js", userId: req.session.loggedUserId });
                 }
                 else {
                     console.log('Wrong password');
@@ -88,3 +88,15 @@ exports.checkAuthenticated = function (req, res, next) {
     }
 }
 
+exports.checkAdmin = function (req, res, next) {
+    if (req.session.accountType === 'admin') {
+        next();
+    }
+    else {
+        console.log("not admin, redirecting to /login");
+        errorMessage = { message: "Πρέπει να είστε διαχειριστής" };
+        // res.location('/login');
+        res.location('/login').render('login', { layout: 'main', style: "login.css", title: "Login", script: "login.js", loginError: errorMessage });
+        // res.render('login', { layout: 'main', style: "login.css", title: "Login", script: "login.js", loginError: errorMessage });
+    }
+}

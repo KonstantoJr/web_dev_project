@@ -15,6 +15,7 @@ exports.getEventById = function (req, res) {
             res.render('event', {
                 layout: 'main',
                 style: "event.css",
+                userId: req.session.loggedUserId,
                 title: event.name,
                 eventTitle: event.name,
                 eventDate: event.start_date + "\n" + event.start_time,
