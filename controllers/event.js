@@ -24,7 +24,8 @@ exports.getEventById = function (req, res) {
                 eventDescription: event.description,
                 eventCast: event.contributor,
                 eventOrganizer: event.organizer,
-                id:req.params.id
+                id:req.params.id,
+                eventPrice: event.price
             })
         }
     });

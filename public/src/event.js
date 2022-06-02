@@ -2,12 +2,13 @@
 document.getElementById("description").addEventListener("click", descActivation);
 
 function descActivation() {
-    console.log("ada")
+    // console.log("ada")
     castCrew1.className = "";
     organizer1.className = "";
     description1.className = "active";
     castCrew1.style.display = "None";
     organizer1.style.display = "None";
+    price1.style.display = "None";
     description1.style.display = "block";
 }
 document.getElementById("castCrew").addEventListener("click", castActivation);
@@ -18,6 +19,7 @@ function castActivation() {
     castCrew1.className = "active";
     description1.style.display = "None";
     organizer1.style.display = "None";
+    price1.style.display = "None";
     castCrew1.style.display = "block";
 
 }
@@ -29,15 +31,29 @@ function orgActivation() {
     organizer1.className = "active";
     castCrew1.style.display = "None";
     description1.style.display = "None";
+    price1.style.display = "None";
     organizer1.style.display = "block";
 
 }
 
-document.getElementById("btnreservation").addEventListener("click", openForm);
+document.getElementById("price").addEventListener("click", priceActivation);
 
-function openForm() {
-    href= "/form"
+function priceActivation() {
+    castCrew1.className = "";
+    organizer1.className = "";
+    description1.className = "";
+    price1.className = "active";
+    castCrew1.style.display = "None";
+    description1.style.display = "None";
+    organizer1.style.display = "None";
+    price1.style.display = "block";
 
 }
+
+
+
+
+
+
 
 

@@ -20,10 +20,11 @@
 	<div class="details_menu">
 
 		<dl>
-			<dt id="description"> Περιγραφή</a></dt>
+			<dt id="description"> Περιγραφή</dt>
 
-			<dt id="castCrew"> Συντελεστές </a></dt>
-			<dt id="organizer"> Διοργανωτής </a></dt>
+			<dt id="castCrew"> Συντελεστές </dt>
+			<dt id="organizer"> Διοργανωτής </dt>
+			<dt id="price"> Τιμή </dt>
 			<br><br>
 		</dl>
 
@@ -52,6 +53,15 @@
 				{{/each}}
 			</dd>
 		</div>
+
+		<div id="price1" class="">
+			<dd>
+				{{#each eventPrice}}
+				<p> {{this}} </p>
+				{{/each}}
+			</dd>
+		</div>
+
 	</div>
 </div>
 
