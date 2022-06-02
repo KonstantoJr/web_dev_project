@@ -48,3 +48,7 @@ CD into folder sqlite found under model and run the following command
 ```
 sqlite3 database.sqlite < database.sql
 ```
+After running the above command run the 
+```
+populateDb.js
+```
