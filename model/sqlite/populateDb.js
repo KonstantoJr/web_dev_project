@@ -37,7 +37,7 @@ var simpleUsersPassword = ['user1', 'user2', 'user3'];
 for (let i = 0; i < simpleUsers.length; i++) {
     let hashedPassword = bcrypt.hashSync(simpleUsersPassword[i], 10);
     let stmt = sql.prepare("INSERT INTO user VALUES (null, ?, ?, ?)");
-    stmt.run(simpleUsers[i], simpleUsersEmail[i], hashedPassword);
+    stmt.run(simpleUsers[i], hashedPassword, simpleUsersEmail[i]);
 }
 
 

@@ -43,6 +43,17 @@ exports.findAdminbyUsernamePassword = (username, password, callback) => {
     callback(null, user);
 }
 
+exports.getUserByUsername = function (username, callback) {
+    const stmt = sql.prepare("SELECT id, username, password FROM user WHERE username = ? LIMIT 0, 1");
+    let user;
+    try {
+        user = stmt.all(username);
+    } catch (err) {
+        callback(err, null);
+    }
+    callback(null, user[0]);
+}
+
 let getAdminByUsername = (username, callback) => {
     const stmt = sql.prepare("SELECT id, username, password FROM admin WHERE username = ? LIMIT 0, 1");
     let user;
@@ -54,36 +65,130 @@ let getAdminByUsername = (username, callback) => {
 
     callback(null, user[0])
 }
-
+let getUserByUsername = (username, callback) => {
+    const stmt = sql.prepare("SELECT id, username, password FROM user WHERE username = ? LIMIT 0, 1");
+    let user;
+    try {
+        user = stmt.all(username);
+    } catch (err) {
+        callback(err, null);
+    }
+    callback(null, user[0]);
+}
+exports.getUserByUsername = getUserByUsername;
 exports.getAdminByUsername = getAdminByUsername;
 
 // Until we implement users we dont need it
-exports.registerUser = function (username, password, callback) {
+exports.registerUser = function (username, password, email, callback) {
     // ελέγχουμε αν υπάρχει χρήστης με αυτό το username
-    getAdminByUsername(username, async (err, userId) => {
-        if (userId != undefined) {
-            callback(null, null, { message: "Υπάρχει ήδη χρήστης με αυτό το όνομα" })
-        } else {
+    let stmt = sql.prepare("SELECT username FROM admin WHERE username = ? LIMIT 0, 1");
+    let user;
+    try {
+        user = stmt.all(username);
+    }
+    catch (err) {
+        callback(err, null);
+    }
+    if (user.length > 0) {
+        let results = {
+            result: null,
+            message: 'Username already exists'
+        }
+        callback(null, results);
+    }
+    else {
+        stmt = sql.prepare("SELECT username FROM user WHERE username = ? LIMIT 0, 1");
+        try {
+            user = stmt.all(username);
+        }
+        catch (err) {
+            callback(err, null);
+        }
+        if (user.length > 0) {
+            let results = {
+                result: null,
+                message: 'Username already exists'
+            }
+            callback(null, results);
+        }
+        else {
+            stmt = sql.prepare('SELECT email FROM user WHERE email = ? LIMIT 0, 1');
             try {
-                const hashedPassword = await bcrypt.hash(password, 10);
-                const stmt = sql.prepare('INSERT INTO admin VALUES (null, ?, ?)');
-                let info;
-
+                user = stmt.all(email);
+            }
+            catch (err) {
+                callback(err, null);
+            }
+            if (user.length > 0) {
+                let results = {
+                    result: null,
+                    message: 'Email already registered'
+                }
+                callback(null, results);
+            }
+            else {
+                // εισάγουμε τον χρήστη στη βάση
+                stmt = sql.prepare("INSERT INTO user (username, password, email) VALUES (?, ?, ?)");
                 try {
-                    info = stmt.run(username, hashedPassword);
+                    let hashedPassword = bcrypt.hashSync(password, 10);
+                    stmt.run(username, hashedPassword, email);
                 }
                 catch (err) {
-                    //Αν υπάρχει σφάλμα, κάλεσε τη συνάρτηση επιστροφής και δώστης το σφάλμα
                     callback(err, null);
                 }
-                //Αλλιώς κάλεσε τη συνάρτηση επιστροφής με όρισμα το id που πήρε από τη βάση η νέα εγγραφή
-                //Την τιμή του info.lastInsertRowid μας τη δίνει η ίδια η βάση και εξασφαλίζουμε έτσι πως κάθε
-                //εγγραφή έχει μοναδικό id
-                callback(null, info.lastInsertRowid);
-            } catch (error) {
-                callback(error);
+                let results = {
+                    result: true,
+                    message: 'User registered'
+                }
+                callback(null, results);
             }
         }
+    }
+}
 
-    })
+exports.doLogin = function (username, callback) {
+    // ελέγχουμε αν υπάρχει χρήστης με αυτό το username
+    // console.log(username)
+    let stmt = sql.prepare("SELECT id , username, password FROM admin WHERE username = ? LIMIT 0, 1");
+    let user;
+    try {
+        user = stmt.all(username);
+    } catch (err) {
+        callback(err, null);
+    }
+    if (user.length > 0) {
+        // console.log(user);
+        user = user[0];
+        let results = {
+            id: user.id,
+            password: user.password,
+            accountType: 'admin'
+        };
+        callback(null, results)
+    }
+    else {
+        stmt = sql.prepare("SELECT id ,username, password FROM user WHERE username = ? LIMIT 0, 1");
+        try {
+            user = stmt.all(username);
+        } catch (err) {
+            callback(err, null);
+        }
+        if (user.length > 0) {
+            user = user[0];
+            // console.log(user)
+            let results = {
+                id: user.id,
+                password: user.password,
+                accountType: 'user'
+            };
+            callback(null, results)
+        }
+        else {
+            let results = {
+                id: null,
+                message: 'Username or password incorrect'
+            }
+            callback(null, results);
+        }
+    }
 }
