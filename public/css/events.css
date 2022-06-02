@@ -37,6 +37,7 @@
     min-width: 11vw;
     height: fit-content;
     text-align: center;
+    /* overflow-wrap: break-word; */
     /* margin-right: 15px;
     margin-left: 15px;
     margin-top: 5px; */
@@ -48,12 +49,14 @@
 }
 .eventTitle {
     padding-top: 5px;
+    overflow-wrap: break-word;
     
     /* background-color: brown; */
 }
 
 .eventDate {
     padding-top: 5px;
+    overflow-wrap: break-word;
     /* background-color: blue; */
 }
 
@@ -88,6 +91,7 @@
         padding-top: 70px;
         float: left;
         margin-right: 10px;
+        
         
     }
     .smallBanner{

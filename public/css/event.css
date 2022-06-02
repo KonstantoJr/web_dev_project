@@ -71,17 +71,22 @@
       background-color: rgb(47, 230, 47);
       width: 80%;
       height: 100%;
-      
-      
-
 
   }
+    .eventReservation a{
+        text-decoration: None;
+    }
+      
+
+
+  
   .details_menu dl {
       display: block;
       margin-block-start: 1em;
       margin-block-end: 1em;
       margin-inline-start: 0px;
       margin-inline-end: 0px;
+      cursor: pointer;
   }
   .details_menu dt     {
       float: left;
