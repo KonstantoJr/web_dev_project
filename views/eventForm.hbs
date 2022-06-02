@@ -3,7 +3,7 @@
 <div class="popup"></div>
 
 <div class="eventForm" id="adminForm">
-  <form  class="form-container">
+  <form  class="form-container" method="POST" action="/submit">
     <h1 style="text-align: center;">Προσθήκη Παράστασης</h1>
 
     <div class="Details">
@@ -75,6 +75,6 @@
     
 
     <button type="submit" class="btn">Υποβολή Παράστασης</button>
-    <button type="button" class="btn cancel" onclick="closeForm()"> Ακύρωση</button>
+    <button type="button" class="btn cancel" ><a href="/delete">  Ακύρωση </a></button>
   </form>
 </div>
