@@ -1,37 +1,49 @@
 .list-group-item {
-    width: 98%;
+    width: 98vw;
     margin: 5px auto;
     background-color: rgb(206, 160, 160);
+    
  
 }
 
-
-
+/* .infoBlock{
+    display: inline-block;
+    border: 2px solid black;
+    width: 30vw;
+    height: 100%;
+} */
 .smallBanner{
     display: inline-block;
-    min-width: 180px;
-    min-height: 190px;
+    padding: 5px 5px 5px 5px;
+    min-width: 18vw;
+    min-height: 210px;
     max-height: 210px;
-    max-width: 200px;
-    /* width: 20%; */
+    max-width: 18vw;
+    
+    border: 2px solid black;
+    width: 18vw;
+    /* height: 100%; */
 }
 
 .info {
     display: inline-block;
-    padding-left: 5px;
-    padding-right: 5px;
-    width: 15%;
+    padding: 5px 0 5px 5px;
+    width: 11.5vw;
+    min-width: 11vw;
     height: fit-content;
-    margin-right: 15px;
+    text-align: center;
+    /* margin-right: 15px;
     margin-left: 15px;
-    margin-top: 5px;
+    margin-top: 5px; */
     /* background-color: beige; */
     color: black;
-    position: relative;
-    top: 35px;
+    border: 2px solid black;
+    /* position: relative; */
+    /* top: 35px; */
 }
 .eventTitle {
     padding-top: 5px;
+    
     /* background-color: brown; */
 }
 
@@ -42,17 +54,81 @@
 
 .eventDesc {
     display: inline-block;
-    padding-left: 15px;
+    padding-left: 10px;
     padding-right: 10px;
-    /* background-color: aquamarine; */
-    width: 65%;
-    height: 200px;
+    /* background-color: rgb(230, 109, 23);  */
+    width: 65vw ;
+    height: 210px;
     position: absolute;
-    top: 5px;
+    margin-left: 10px;
+    margin-right: 20px;
+    /* border: 3px solid red; */
 }
 
 .eventDesc #eventDescr {
+    width: 100%;
+    height: 100%;
     background-color: aquamarine;
     font-size: 10px;
+    /* width: 60%; */
+    resize: none;
+ 
+}
+
+@media screen and (max-width: 1200px) {
+    .info{
+        width: 20vw;
+        min-width: 210px;
+        height: 210px;
+        padding-top: 70px;
+        float: right;
+        
+    }
+    .smallBanner{
+        width: 65vw;
+        min-width: 210px;
+    }
+    .eventDesc {
+        float: left;
+        width: 90vw;
+        margin-top: 10px;
+        display: block;
+        position: relative;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .smallBanner{
+        width: 90vw;
+        min-width: 210px;
+        max-width: 210px;
+        display: block;
+        position: static;
+        float: left;
+    }
+
+    .info{
+        display: block;
+        position: static;
+        float: left;
+        margin-left: 0;
+        width: 90vw;
+        min-width: 210px;
+        max-width: 210px;
+        height: 210px;
+        padding-top: 70px;
+        
+        margin-top: 5px;
+        
+    }
     
+    .eventDesc {
+        float: left;
+        width: 90vw;
+        margin-top: 10px;
+        display: block;
+        position: static;
+        margin-left: 0;
+    }
 }

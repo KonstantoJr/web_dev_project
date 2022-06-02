@@ -13,7 +13,7 @@ exports.getEvents = function (req, res) {
                     event.push(events[i]);
                 }
             }
-            console.log(event);
+            // console.log(event);
             res.render('events', {
                 layout: 'bootstrap',
                 style: "events.css",
