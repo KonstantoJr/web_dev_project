@@ -9,6 +9,7 @@ const eventRouter = require('./event.js');
 const formRouter = require('./form.js');
 const eventFormRouter = require('./eventForm.js');
 const eventsRouter = require('./events.js');
+const controlPanelRouter = require('./controlPanel.js');
 
 router.use((req, res, next) => {
     next();
@@ -22,6 +23,7 @@ router.use('/event', eventRouter);
 router.use('/form', formRouter);
 router.use('/eventForm', eventFormRouter);
 router.use('/events', eventsRouter);
+router.use('/controlPanel', controlPanelRouter);
 
 // Home page router
 router.get('/', async (req, res) => {

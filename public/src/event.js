@@ -36,6 +36,7 @@ function orgActivation() {
 document.getElementById("btnreservation").addEventListener("click", openForm);
 
 function openForm() {
+    href= "/form"
 
 }
 

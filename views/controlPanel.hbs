@@ -1,0 +1,28 @@
+<div id="panel" class="row ">
+    <div class="col mt-3">
+        <ul class="list-group">
+            <a href="/eventForm" class="newEventBtn"> Δημιουργία Event  </a>
+            
+            {{#each events}}
+            <li class="list-group-item">
+                {{!-- <div class="infoBlock" > --}}
+                    <img class="smallBanner" src={{this.img}}>
+                    <div class="info">
+                        <div class="eventTitle"><b>{{this.name}} </b></div>
+                        <div class="eventDate"><b>Ημ/νια: {{this.start_date}}</b> </div>
+                    </div>
+                {{!-- </div> --}}
+                <div class="eventButtons">
+                    <div class="editBtnLabel"> <button class="editBtn" > Επεξεργασία Event </button></div>
+                    
+                    <div class="eraseBtnLabel"> <button class="eraseBtn"> Διαγραφή Event </button></div>
+                </div>
+
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
+
+
+<script src="/src/controlPanel.js"></script>

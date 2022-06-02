@@ -1,0 +1,1 @@
+document.getElementsById("panel").style.minWidth = "590px";
