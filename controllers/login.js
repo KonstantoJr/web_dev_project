@@ -28,11 +28,6 @@ exports.doRegister = function (req, res) {
     })
 }
 
-exports.doUserLogin = function (req, res, next) {
-    model.getUserByUsername(req.body.email, (err, user) => {
-
-    });
-}
 exports.doLogin = function (req, res) {
     //Ελέγχει αν το username και το password είναι σωστά και εκτελεί την
     //συνάρτηση επιστροφής authenticated
@@ -129,7 +124,8 @@ exports.checkAuthenticated = function (req, res, next) {
 }
 
 exports.checkAdmin = function (req, res, next) {
-    if (req.session.accountType === 'admin') {
+    // console.log(req.session)
+    if (req.session.loggedUserType === 'admin') {
         next();
     }
     else {
