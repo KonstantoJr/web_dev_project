@@ -51,12 +51,7 @@ exports.doLogin = function (req, res) {
             if (match) {
                 req.session.loggedUserId = result.id;
                 req.session.loggedUserType = result.accountType;
-                res.render('home', {
-                    layout: 'main',
-                    style: "home.css", title: "Home",
-                    script: "home.js",
-                    userId: req.session.loggedUserId
-                })
+                res.redirect('/controlPanel');
             }
             else {
                 res.render('login', {
