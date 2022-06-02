@@ -92,22 +92,34 @@
       align-items: center;
       font-size: 17px;
   }
+
+
   
-  
-.description {
-    z-index: 0;
+/* #description1 {
+    
+    display: None;
+    
+}
+
+#castCrew1 {
+    
     display: block;
+   
 }
 
-.castCrew {
-    z-index: 1;
-    display: None;
-}
+#organizer1 {
+    
+    display: block;
+  
+}   */
 
-.organizer {
-    z-index: 2;
-    display: None;
-}
+.active  {
+    display: block;
+    background-color: aquamarine;
+    opacity: 1;
+    
+    /* z-index: 0; */
+} 
 
 
   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */

@@ -1,19 +1,58 @@
-.smallBanner{
-    display: inline-block;
-    max-height: 250px;
-    max-width: 250px;
+.list-group-item {
+    width: 98%;
+    margin: 5px auto;
+    background-color: rgb(206, 160, 160);
+ 
 }
 
-.eventTitle {
+
+
+.smallBanner{
     display: inline-block;
-    padding-left: 15px;
+    min-width: 180px;
+    min-height: 190px;
+    max-height: 210px;
+    max-width: 200px;
+    /* width: 20%; */
+}
+
+.info {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 15%;
+    height: fit-content;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 5px;
+    /* background-color: beige; */
+    color: black;
+    position: relative;
+    top: 35px;
+}
+.eventTitle {
+    padding-top: 5px;
+    /* background-color: brown; */
 }
 
 .eventDate {
-    display: inline-block;
+    padding-top: 5px;
+    /* background-color: blue; */
 }
 
 .eventDesc {
     display: inline-block;
     padding-left: 15px;
+    padding-right: 10px;
+    /* background-color: aquamarine; */
+    width: 65%;
+    height: 200px;
+    position: absolute;
+    top: 5px;
+}
+
+.eventDesc #eventDescr {
+    background-color: aquamarine;
+    font-size: 10px;
+    
 }

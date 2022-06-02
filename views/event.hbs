@@ -1,13 +1,13 @@
 <div class="event_page">
 		<div class="img_box">
-			<img class="mainimg" src="./img/img1.png"> </img>
+			<img class="mainimg" src={{eventImg}}> </img>
 		</div>
 		<div class="info">
-			<div class="eventTitle"> <h2 style="text-align: center"> {{event}}  </h2></div>
+			<div class="eventTitle"> <h2 style="text-align: center"> {{eventTitle}}  </h2></div>
 			<div class="eventInfo"> 
-				<span id="eventDate">Date: 30 Μαίου</span>
+				<span id="eventDate"> Date: {{eventDate}} </span>
 				<br>
-				<p id="location">Theater: <a href="Royal Theater" id="eventTheater"> Royal Theater </a></p>
+				<p id="location">Theater: <a href="Royal Theater" id="eventTheater"> {{eventPlace}} </a></p>
 				
 			</div>
 			<div class="eventReservation">
@@ -16,28 +16,24 @@
 		</div>
 
 		<div class="details_menu">
-			{{!-- <select class="responsive-tabs-dropdown tp-form-control"> 
-				<option value="0"> Περιγραφή</option>
-				<option value="1"> Συντελεστές</option>
-                <option value="2"> Διοργανωτής</option>
-            </select> --}}
+			
 			<dl>
-				<dt id="description" class="active"> <a href="#description">Περιγραφή</a></dt>
-				<dt id="castCrew" class=""> <a href="#castcrew"> Συντελεστές </a></dt>
-				<dt id="organizer" class="" > <a href="#organizer"> Διοργανωτής </a></dt>
+				<dt id="description"  > <a href="#description">Περιγραφή</a></dt>
+					
+				<dt id="castCrew"  > <a href="#castcrew"> Συντελεστές </a></dt>
+				<dt id="organizer"  > <a href="#organizer"> Διοργανωτής </a></dt>
 				<br><br>
 			</dl>
 			
 		</div>
 		<div class="placeholder_information">
-			<div class="description">
-				<dd>
-				<p> perigrafi ths parastashs </p>
-				</dd>
+			<div id="description1" class="active">
+						<dd>
+						<p> perigrafi ths parastashs </p>
+						</dd>
+					</div>
 
-			</div>
-
-			<div class="castCrew">
+			<div id="castCrew1" class="">
 				<dd>
 					<strong> Ηθοποιοί</strong>
 					<p>abgd</p>
@@ -63,14 +59,40 @@
 				</dd>
 			</div>
 
-			<div class="organizer">
+			<div id="organizer1" class="">
 				<dd>
 				<p>ME.AS.AE</p>
 				</dd>
-
 			</div>
 		</div>
 	</div>
 	
+<script>
+document.getElementById("description").addEventListener("click",descActivation);
+	
+function descActivation() {
+	console.log("ada")
+    castCrew1.className= "";
+	organizer1.className= "";
+	description1.className ="active";
+}
+document.getElementById("castCrew").addEventListener("click",castActivation);
 
+function castActivation() {
+	organizer1.className = "";
+	description1.className = "";
+	castCrew1.className = "active";
+	
+}
+document.getElementById("organizer").addEventListener("click",orgActivation);
+
+function orgActivation() {
+    castCrew1.className = "";
+	description1.className ="";
+	organizer1.className = "active";
+	
+}
+
+
+</script>
 

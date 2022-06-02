@@ -2,12 +2,21 @@
         <div class="col mt-3">
             <ul class="list-group">
                 {{#each events}}
-                    <li class="list-group-item"><a href="/event/{{id}}" >
-                    <img class = "smallBanner" src = "./img/img1.png"></a> 
-                    <div class="eventTitle">{{title}} -</div>  
-                    <div class="eventDate">{{date}} </div>
-                    <div class="eventDesc"> <textarea id="eventDescr" cols="50" rows="5" > {{description}} </textarea></div>
+                    <li class="list-group-item">
+                    <a href="/event/{{id}}" >
+                    <img class = "smallBanner" src = {{image}}>
+                    <div class="info">
+                    <div class="eventTitle"><b>{{title}} </b></div>
+                    <br>  
+                    <div class="eventDate"><b>Ημ/νια: {{date}} </b> </div>
+
+                    </div>
+                    </a> 
+                    <div class="eventDesc"> <textarea id="eventDescr" style="height: 100%; width: 100%;" readonly wrap="hard"> {{description}} 
                         
+                    </textarea>
+                    </div>
+                    
                     </li>
                 {{/each}}
             </ul>
