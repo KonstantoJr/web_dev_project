@@ -7,11 +7,11 @@
 			<div class="eventInfo"> 
 				<span id="eventDate"> Date: {{eventDate}} </span>
 				<br>
-				<p id="location">Theater: <a href="Royal Theater" id="eventTheater"> {{eventPlace}} </a></p>
+				<p id="eventTheater"> Theater:  {{eventPlace}} </p>
 				
 			</div>
 			<div class="eventReservation">
-				<button type="button" class="btnReservation"> Κάντε Κράτηση</button>
+				<button id="btnreservation" type="button" class="btnReservation"> Κάντε Κράτηση</button>
 			</div>
 		</div>
 
@@ -29,70 +29,23 @@
 		<div class="placeholder_information">
 			<div id="description1" class="active">
 						<dd>
-						<p> perigrafi ths parastashs </p>
+						<p> {{eventDescription}} </p>
 						</dd>
 					</div>
 
 			<div id="castCrew1" class="">
-				<dd>
-					<strong> Ηθοποιοί</strong>
-					<p>abgd</p>
-					<p>abgd</p>
-					<p>abgd</p>
-					<p>abgd</p>
-					<p>abgd</p>
-					<p>abgd</p>
-					<p>abgd</p>
-					<p>abgd</p>
-					<p>abgd</p>
-					<p>abgd</p>
-					<p>abgd</p>
-					<p>abgd</p>
-					<p>abgd</p>
-					<p>abgd</p>
-					<p>abgd</p>
-					<p>abgd</p>
-					<p>abgd</p>
-					<p>abgd</p>
-					<p>abgd</p>
-					<p>abgd</p>
+				<dd>{{eventCast}}
 				</dd>
 			</div>
 
 			<div id="organizer1" class="">
 				<dd>
-				<p>ME.AS.AE</p>
+				{{eventOrganizer}}
 				</dd>
 			</div>
 		</div>
 	</div>
 	
-<script>
-document.getElementById("description").addEventListener("click",descActivation);
-	
-function descActivation() {
-	console.log("ada")
-    castCrew1.className= "";
-	organizer1.className= "";
-	description1.className ="active";
-}
-document.getElementById("castCrew").addEventListener("click",castActivation);
 
-function castActivation() {
-	organizer1.className = "";
-	description1.className = "";
-	castCrew1.className = "active";
-	
-}
-document.getElementById("organizer").addEventListener("click",orgActivation);
-
-function orgActivation() {
-    castCrew1.className = "";
-	description1.className ="";
-	organizer1.className = "active";
-	
-}
-
-
-</script>
+<script src="/src/event.js"></script>
 

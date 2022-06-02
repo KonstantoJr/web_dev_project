@@ -95,31 +95,31 @@
 
 
   
-/* #description1 {
-    
-    display: None;
+ #description1 {
+    display: block;
+   
     
 }
 
 #castCrew1 {
-    
-    display: block;
+    display: None;
+   
    
 }
 
 #organizer1 {
-    
-    display: block;
+    display: None;
+   
   
-}   */
+}   
 
-.active  {
-    display: block;
-    background-color: aquamarine;
-    opacity: 1;
+/* .active  {
+     display: block; 
+     background-color: aquamarine; 
+   
     
-    /* z-index: 0; */
-} 
+ 
+}  */
 
 
   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
