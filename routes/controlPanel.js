@@ -8,5 +8,6 @@ router.use((req, res, next) => {
 });
 
 router.get('/', loginController.checkAdmin, controller.getEventsByAdminId);
+router.get('/delete:id', loginController.checkAdmin, controller.deleteEvent);
 
 module.exports = router;

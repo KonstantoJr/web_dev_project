@@ -25,3 +25,16 @@ exports.getEventsByAdminId = function (req, res) {
         }
     });
 }
+
+exports.deleteEvent = function (req, res) {
+    // console.log(req.params.id);
+    db.deleteEvent(req.params.id, function (err, result) {
+        if (err) {
+            console.log(err);
+            res.status(500).send(err);
+        }
+        else {
+            res.redirect('/controlPanel');
+        }
+    });
+}

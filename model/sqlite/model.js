@@ -202,3 +202,14 @@ exports.doLogin = function (username, callback) {
         }
     }
 }
+
+
+exports.deleteEvent = function (id, callback) {
+    let stmt = sql.prepare("DELETE FROM event WHERE id = ?");
+    try {
+        stmt.run(id);
+    } catch (err) {
+        callback(err, null);
+    }
+    callback(null, true);
+}
