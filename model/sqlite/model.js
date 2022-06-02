@@ -20,6 +20,17 @@ exports.getEventById = function (id, callback) {
     callback(null, events);
 }
 
+exports.getEvents = function (callback) {
+    const stmt = sql.prepare("SELECT id ,name, description, start_date, img FROM event");
+    let events;
+    try {
+        events = stmt.all();
+    } catch (err) {
+        callback(err, null);
+    }
+    callback(null, events);
+}
+
 exports.findAdminbyUsernamePassword = (username, password, callback) => {
     //Φέρε μόνο μια εγγραφή (το LIMIT 0, 1) που να έχει username και password ίσο με username και password 
     const stmt = sql.prepare("SELECT username FROM admin WHERE username = ? and password = ? LIMIT 0, 1");

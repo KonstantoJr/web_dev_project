@@ -1,25 +1,23 @@
-   <div class="row ">
-        <div class="col mt-3">
-            <ul class="list-group">
-                {{#each events}}
-                    <li class="list-group-item">
-                    <a href="/event/{{id}}" >
-                    <img class = "smallBanner" src = {{image}}>
+<div class="row ">
+    <div class="col mt-3">
+        <ul class="list-group">
+            {{#each events}}
+            <li class="list-group-item">
+                <a class="infoBlock" href="/event/{{this.id}}">
+                    <img class="smallBanner" src={{this.img}}>
                     <div class="info">
-                    <div class="eventTitle"><b>{{title}} </b></div>
-                    <br>  
-                    <div class="eventDate"><b>Ημ/νια: {{date}} </b> </div>
-
+                        <div class="eventTitle"><b>{{this.name}} </b></div>
+                        <div class="eventDate"><b>Ημ/νια: {{this.start_date}}</b> </div>
                     </div>
-                    </a> 
-                    <div class="eventDesc"> <textarea id="eventDescr" style="height: 100%; width: 100%;" readonly wrap="hard"> {{description}} 
-                        
+                </a>
+                <div class="eventDesc">
+                    <textarea id="eventDescr" style="height: 100%; width: 100%;" readonly wrap="hard">
+                        {{this.description}} 
                     </textarea>
-                    </div>
-                    
-                    </li>
-                {{/each}}
-            </ul>
-        </div>
-    </div>
+                </div>
 
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
