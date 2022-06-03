@@ -10,7 +10,7 @@ exports.connect = (callback) => {
 }
 
 exports.getEventById = function (id, callback) {
-    const stmt = sql.prepare("SELECT name , description ,total_seats , organizer, duration , start_date , start_time , img , contributor , price , phone FROM event WHERE id = ? LIMIT 0, 1");
+    const stmt = sql.prepare("SELECT name , description ,total_seats , organizer, duration , start_date , start_time , img , contributor , price , phone, location FROM event WHERE id = ? LIMIT 0, 1");
     let events;
     try {
         events = stmt.all(id);

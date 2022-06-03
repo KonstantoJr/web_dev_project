@@ -12,19 +12,20 @@
   z-index: 100;
   cursor: pointer;
   transition: opacity .3s;
+  line-height: 1;
 }
 
 .popup {
   display: none;
   opacity: 0;
   width: 50vh; height: 50vh;
-  min-width: 300px;
+  min-width: 350px;
   min-height: 300px;
   position: fixed;
   top: 25vh; left: 40%;
   z-index: 101;
   transition: opacity .3s;
-
+  line-height: 1;
   background-color: white;
   padding: 60px 20px 40px;
   border-radius: 6px;
@@ -36,13 +37,13 @@
 }
 
 .form-container {
-    max-width: 600px;
+    max-width: 700px;
     min-width: 580px;
     padding: 15px;
     background-color: rgb(131, 235, 226);
     
     position: relative;
-    margin: 13% auto;
+    margin: 5% auto;
     border: 2px solid red;
     border-radius: 8%;
   }
@@ -85,6 +86,7 @@
 
 .tick {
   display: inline-block;
+  text-align: center;
 }
 
   .tickets  {
@@ -96,6 +98,7 @@
   }
   .price {
     display: inline-block;
+    text-align: center;
     margin-bottom: 20px;
     margin-left: 2%;
     margin-top: 5%;

@@ -31,8 +31,15 @@ sum_cost1.innerHTML = sum_cost + " €";
 // console.log(sum_cost)
 
 
-document.getElementById("btnPrice").addEventListener("click", () => {
+// document.getElementById("btnPrice").addEventListener("click", () => {
+//     location.reload(); 
+
+
+// });
+
+document.getElementsByClassName("ticketInput").addEventListener("input", () => {
     location.reload(); 
 
 
 });
+
