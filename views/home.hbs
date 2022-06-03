@@ -8,9 +8,9 @@
         <li id="carousel__slide1" tabindex="0" class="carousel__slide">
             <div class="carouselImage">
                 <div class="imgTitle"> <p>{{event.title1}}</p> </div>
-                 <img src={{event.img1}} id="myImg">
+                 <img src={{event.img1}} id="myImg" >
             </div>
-            <a href = "/event/{{event.id2}}" class="carousel__snapper"></a>
+            <a href = "/event/{{event.id1}}" class="carousel__snapper"></a>
             <a href="#carousel__slide3" class="carousel__prev">Go to last slide</a>
             <a href="#carousel__slide2" class="carousel__next">Go to next slide</a>
             
@@ -18,7 +18,7 @@
         <li id="carousel__slide2" tabindex="0" class="carousel__slide">
             <div class="carouselImage">
                 <div class="imgTitle"> <p>{{event.title2}}</p> </div>
-                 <img src={{event.img2}} id="myImg">
+                 <img src={{event.img2}} id="myImg" style="height:410px ;">
             </div>
             <a href="/event/{{event.id2}}"class="carousel__snapper"></a>
             <a href="#carousel__slide1" class="carousel__prev">Go to previous slide</a>
@@ -27,7 +27,7 @@
         <li id="carousel__slide3" tabindex="0" class="carousel__slide">
             <div class="carouselImage">
                 <div class="imgTitle"> <p>{{event.title3}}</p> </div>
-                 <img src={{event.img3}} id="myImg">
+                 <img src={{event.img3}} id="myImg" style="height:410px ;">
             </div>
             <a href="/event/{{event.id3}}" class="carousel__snapper"></a>
             <a href="#carousel__slide2" class="carousel__prev">Go to previous slide</a>

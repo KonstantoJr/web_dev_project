@@ -11,6 +11,7 @@ const aboutRouter = require('./about.js');
 const eventFormRouter = require('./eventForm.js');
 const eventsRouter = require('./events.js');
 const controlPanelRouter = require('./controlPanel.js');
+const reservationsRouter =  require('./reservations.js');
 
 
 router.use((req, res, next) => {
@@ -27,6 +28,7 @@ router.use('/about', aboutRouter);
 router.use('/eventForm', eventFormRouter);
 router.use('/events', eventsRouter);
 router.use('/controlPanel', controlPanelRouter);
+router.use('/controlPanel/reservations', reservationsRouter);
 
 // Home page router
 router.get('/', homeController.getPopularEvents);

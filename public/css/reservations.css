@@ -1,0 +1,31 @@
+.description {
+    display: block;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.row {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+}
+.reservation {
+    display: inline-block;
+    text-align: center;
+    /* border-collapse: collapse; */
+    /* border: 1px solid black; */
+  }
+
+ td{
+    padding: 3px;
+    
+}
+
+th {
+    padding: 5px;
+}
+
+table, th, td{
+    border: 1px solid black;
+
+}
