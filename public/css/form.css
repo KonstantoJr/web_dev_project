@@ -45,6 +45,7 @@
     margin: 5% auto;
     border: 2px solid red;
     border-radius: 8%;
+    line-height: 1;
   }
 
   .Details {

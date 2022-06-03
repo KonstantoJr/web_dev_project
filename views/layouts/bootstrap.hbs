@@ -22,6 +22,8 @@
                         <a href="/login">Είσοδος</a>
                     {{/if}} </li>
             </ul>
+            {{#if admin}}
+            {{else}}
             <div class="container">
 
                 <div class="logo">
@@ -33,7 +35,7 @@
                     <h1> ΙΣΤΟΣΕΛΙΔΑ ΚΡΑΤΗΣΗΣ ΕΚΔΗΛΩΣΕΩΝ</h1>
                 </div>
             </div>
-
+            {{/if}}
             {{{body}}}
         
 

@@ -115,6 +115,7 @@
       /* color: black; */
       color: #0055ff;
   }
+  
   .details_menu .active{
     opacity: 1;
     color: #0055ff;
@@ -126,6 +127,8 @@
   
  #description1 {
     display: block;
+    
+
    
     
 }
