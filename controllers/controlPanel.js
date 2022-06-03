@@ -21,7 +21,9 @@ exports.getEventsByAdminId = function (req, res) {
                 title: "ControlPanel",
                 userId: req.session.loggedUserId,
                 events: event,
-                admin: 'exists'
+                admin: 'exists',
+                userId: req.session.loggedUserId,
+                accountType: req.session.loggedUserType
             })
         }
     });

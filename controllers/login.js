@@ -52,6 +52,13 @@ exports.doLogin = function (req, res) {
                 req.session.loggedUserId = result.id;
                 req.session.loggedUserType = result.accountType;
                 res.redirect('/controlPanel');
+                // res.render('home', {
+                //     layout: 'main',
+                //     style: "home.css", title: "Home",
+                //     script: "home.js",
+                //     userId: req.session.loggedUserId,
+                //     accountType: req.session.loggedUserType
+                // })
             }
             else {
                 res.render('login', {
@@ -70,12 +77,14 @@ exports.doLogin = function (req, res) {
                 req.session.loggedUserId = result.id;
                 req.session.loggedUserType = result.accountType;
                 // console.log(req.session);
-                res.render('home', {
-                    layout: 'main',
-                    style: "home.css", title: "Home",
-                    script: "home.js",
-                    userId: req.session.loggedUserId
-                })
+                res.redirect('/');
+                // res.render('home', {
+                //     layout: 'main',
+                //     style: "home.css", title: "Home",
+                //     script: "home.js",
+                //     userId: req.session.loggedUserId,
+                //     accountType: req.session.loggedUserType
+                // })
             }
             else {
                 res.render('login', {
@@ -137,7 +146,15 @@ exports.checkAdmin = function (req, res, next) {
         console.log("not admin, redirecting to /login");
         errorMessage = { message: "Πρέπει να είστε διαχειριστής" };
         // res.location('/login');
-        res.location('/login').render('login', { layout: 'main', style: "login.css", title: "Login", script: "login.js", loginError: errorMessage });
+        res.redirect('/login').render('login', {
+            layout: 'main',
+            style: "login.css",
+            title: "Login",
+            script: "login.js",
+            loginError: errorMessage,
+            userId: req.session.loggedUserId,
+            accountType: req.session.loggedUserType
+        });
         // res.render('login', { layout: 'main', style: "login.css", title: "Login", script: "login.js", loginError: errorMessage });
     }
 }

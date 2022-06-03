@@ -37,8 +37,11 @@ app.use(session({
 }));
 
 app.engine('hbs', handlebars.engine({
-    extname: '.hbs'
+    extname: '.hbs',
+    helpers: require('./controllers/helpers.js'),
 }));
+
+
 app.set('view engine', 'hbs')
 app.set('views', './views')
 
