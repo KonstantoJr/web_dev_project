@@ -16,7 +16,7 @@
 
 .img_box {
     display: block;
-    height: 300px;;
+    height: 450px;;
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
@@ -93,17 +93,30 @@
       margin-inline-start: 0px;
       margin-inline-end: 0px;
       cursor: pointer;
+      
   }
   .details_menu dt     {
       float: left;
-      color: #014ee9;
+      color: black;
       padding: 10px 30px 10px 30px;
       border-bottom: 3px solid transparent;
       display: flex;
       align-items: center;
       font-size: 17px;
+      /* border-right: 1px solid gray; */
+      opacity: 0.7;
+      font-weight: bold;
   }
 
+  .details_menu dt:hover{
+      opacity: 1;
+      /* color: black; */
+      color: #0055ff;
+  }
+  .details_menu .active{
+    opacity: 1;
+    color: #0055ff;
+  }
 
   
  #description1 {

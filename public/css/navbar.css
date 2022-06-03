@@ -1,3 +1,42 @@
+ /* .container {
+    display: block;
+    width: 100vw;
+    height: 350px;
+    position: absolute;
+    top: 80px;
+
+}  */
+.logo {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.title {
+    display: inline-block;
+    margin-top: 10px;
+    /* background-color: #99f; */
+    padding: 3px;
+    position: absolute;
+    margin-right: 70%;
+    margin-left: 13%;
+    margin-right: 20px;
+    margin-top: 4%;
+}
+
+/* @media screen and (max-width: 550px) {
+    .logo {
+        margin-left: 15%;
+        margin-top: 10px;
+    }
+    .title {
+        display: block;
+        margin: 0;
+        position: relative;
+    }
+    
+    
+} */
+
 .topnav a {
     float: left;
     display: block;
@@ -113,4 +152,15 @@ ul.topnav li.right {
         font-size: 18.5px;
         border-left: 3px solid rgb(0, 0, 0);
     }
+    .logo {
+        margin-left: 15%;
+        margin-top: 10px;
+    }
+    .title {
+        display: block;
+        margin: 0;
+        position: relative;
+        text-align: center;
+    }
+    
 }

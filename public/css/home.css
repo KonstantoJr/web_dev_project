@@ -3,6 +3,16 @@
 }
 
 
+
+.subtitle {
+    display: block;
+    text-align: center;
+
+}
+
+
+
+
 /* Navbar links */
 /* Carousel Css */
 @keyframes tonext {
@@ -59,7 +69,7 @@
     }
 }
 
-.carousel {
+.carousel  {
     max-width: 37.5rem;
     max-height: 30rem;
     margin: 0 auto;
