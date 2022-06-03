@@ -7,7 +7,10 @@ router.use((req, res, next) => {
     next();
 });
 
-router.get('/', loginController.checkAdmin, controller.getEventsByAdminId);
-router.get('/delete:id', loginController.checkAdmin, controller.deleteEvent);
+router.get('/', loginController.checkAuthenticated, loginController.checkAdmin, controller.getEventsByAdminId);
+router.get('/delete/:id', loginController.checkAuthenticated, loginController.checkAdmin, controller.deleteEvent);
+router.get('/edit/:id', loginController.checkAuthenticated, loginController.checkAdmin, controller.getEditById);
+router.get('/reservations/:id', loginController.checkAuthenticated, loginController.checkAdmin, controller.getReservationsById);
+router.post('/edit/:id', loginController.checkAuthenticated, loginController.checkAdmin, controller.editEvent);
 
 module.exports = router;

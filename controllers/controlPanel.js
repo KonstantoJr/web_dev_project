@@ -41,3 +41,32 @@ exports.deleteEvent = function (req, res) {
         }
     });
 }
+
+
+exports.getEditById = function (req, res) {
+    db.getEventById(req.params.id, function (err, event) {
+        if (err) {
+            console.log(err);
+            res.status(500).send(err);
+        }
+        else {
+            console.log(event);
+            res.render('eventForm', {
+                layout: 'main',
+                style: "eventForm.css",
+                title: "Event Form",
+                script: "eventForm.js",
+                userId: req.session.loggedUserId,
+                accountType: req.session.loggedUserType,
+            });
+        }
+    });
+}
+
+exports.getReservationsById = function (req, res) {
+
+}
+
+exports.editEvent = function (req, res) {
+
+}
