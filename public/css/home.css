@@ -10,10 +10,6 @@
 
 }
 
-
-
-
-/* Navbar links */
 /* Carousel Css */
 @keyframes tonext {
     75% {
@@ -69,7 +65,7 @@
     }
 }
 
-.carousel  {
+.carousel {
     max-width: 37.5rem;
     max-height: 30rem;
     margin: 0 auto;
@@ -117,7 +113,7 @@ li {
 }
 
 .carousel__slide:before {
-    content: counter(item);
+    /* content: counter(item); */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -137,18 +133,23 @@ li {
 
 
 .carouselImage {
+    min-height: fit-content;
     width: 100%;
     padding: 5px;
+    padding-top: 10%
 }
-.carouselImage p{
+
+.carouselImage p {
     width: 100%;
     text-align: center;
     font-size: larger;
     font-weight: bolder;
 
 }
-.carouselImage #myImg{
+
+.carouselImage #myImg {
     width: 100%;
+    height: 100%;
     /* margin-top: 4rem; */
     max-height: 25.5rem;
 }

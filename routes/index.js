@@ -1,6 +1,6 @@
 const express = require('express');
 const req = require('express/lib/request');
-
+const homeController = require('../controllers/home');
 
 const router = express.Router();
 
@@ -29,17 +29,7 @@ router.use('/events', eventsRouter);
 router.use('/controlPanel', controlPanelRouter);
 
 // Home page router
-router.get('/', async (req, res) => {
-    // console.log(req.session);
-    res.render('home', {
-        layout: 'bootstrap',
-        style: "home.css",
-        title: "Home",
-        script: "home.js",
-        userId: req.session.loggedUserId,
-        accountType: req.session.loggedUserType
-    })
-});
+router.get('/', homeController.getPopularEvents);
 
 router.get('*', function (req, res) {
     res.send('Sorry, this is an invalid URL.');
