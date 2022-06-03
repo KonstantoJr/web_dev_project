@@ -257,3 +257,28 @@ exports.getPopularEvents = function (callback) {
         callback(err, null);
     }
 }
+
+exports.newEvent = function (form, callback) {
+    let smmt = sql.prepare("INSERT INTO event (name , description,total_seats,organizer,duration,admin_id,start_date,start_time,img,contributor,price,phone,location) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)");
+    try {
+        // console.log(form)
+        smmt.run(
+            form.name,
+            form.description,
+            form.seats,
+            form.organizer,
+            form.duration,
+            form.admin,
+            form.startDate,
+            form.startTime,
+            form.image,
+            form.contributors,
+            form.price,
+            form.phone,
+            form.location
+        );
+    } catch (err) {
+        callback(err, null);
+    }
+    callback(null, true);
+}

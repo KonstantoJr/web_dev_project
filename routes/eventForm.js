@@ -10,6 +10,7 @@ router.use((req, res, next) => {
 
 
 
-router.get('/', loginController.checkAdmin, controller.getEventForm);
+router.get('/', loginController.checkAuthenticated, loginController.checkAdmin, controller.getEventForm);
+router.post('/submit', loginController.checkAuthenticated, loginController.checkAdmin, controller.submitEvent);
 
 module.exports = router;
