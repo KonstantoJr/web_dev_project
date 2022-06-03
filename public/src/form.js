@@ -37,7 +37,7 @@ sum_cost1.innerHTML = sum_cost + " €";
 
 // });
 
-document.getElementsByClassName("ticketInput").addEventListener("input", () => {
+document.getElementsById("quantity1").addEventListener("input", () => {
     location.reload(); 
 
 
