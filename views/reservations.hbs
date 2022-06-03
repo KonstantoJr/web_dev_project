@@ -1,29 +1,35 @@
 <div class="description">
-    <h1><b>Λίστα Κρατήσεων</b></h1>
-    <h2><b>Παράσταση:</b> {{event.title}} <b>Ημ/νια:</b> {{event.date}}</h2>
+  <h1><b>Λίστα Κρατήσεων</b></h1>
+  <h2><b>Παράσταση:</b> {{event.name}} </h2>
+  <h3><b>Ημ/νια:</b> {{event.start_date}} {{event.start_time}}</h3>
+  <h4><b>Συνολικές Κρατήσεις:</b> {{totalReserve}}</h4>
 </div>
 
 
 <div class="row ">
-<table class="reservation">
+  <table class="reservation">
     <div class="reservations">
-        <tr>
-          <th>ID</th>
-          <th>ΟΝΟΜΑ</th>
-          <th>EMAIL</th>
-          <th>ΤΗΛΕΦΩΝΟ</th>
-          <th>ΕΙΣΗΤΗΡΙΑ</th>
-          <th>ΤΙΜΗ</th>
-        </tr>
-        {{#each reservation}}
-        <tr>
-          <td id="rsvId" >{{this.id}}</td>
-          <td class="rsvName" >{{this.name}}</td>
-          <td class="rsvEmail">{{this.email}}</td>
-          <td class="rsvPhone">{{this.phone}}</td>
-          <td class="rsvTickets">{{this.tickets}}</td>
-          <td class="rsvPrice">{{this.price}}</td>
-        </tr>
-      </table>                
-            {{/each}}
-    </div>
+      <tr>
+        <th>ID</th>
+        <th>ΟΝΟΜΑ</th>
+        <th>EMAIL</th>
+        <th>ΤΗΛΕΦΩΝΟ</th>
+        <th>ΕΙΣΗΤΗΡΙΑ</th>
+        <th>ΤΙΜΗ</th>
+      </tr>
+      {{#each reservation}}
+      <tr>
+        <td id="rsvId">{{this.id}}</td>
+        <td class="rsvName">{{this.name}}</td>
+        <td class="rsvEmail">{{this.email}}</td>
+        <td class="rsvPhone">{{this.phone}}</td>
+        <td class="rsvTickets">
+          {{#each this.tickets}}
+          {{this}} <br>
+          {{/each}}
+        </td>
+        <td class="rsvPrice">{{this.price}}</td>
+      </tr>
+      {{/each}}
+  </table>
+</div>

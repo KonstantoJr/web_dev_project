@@ -1,6 +1,6 @@
 const express = require('express');
 const controller = require('../controllers/reservations');
-
+const loginController = require('../controllers/login');
 const router = express.Router();
 
 router.use((req, res, next) => {
@@ -8,16 +8,7 @@ router.use((req, res, next) => {
 });
 
 
-router.get('/', async (req, res) => {
-    // console.log(req.session)
-    res.render('reservations', { layout: 'bootstrap', 
-    style: "reservations.css", 
-    title: "Reservations", 
-    script: "reservation.js",
-    userId: req.session.loggedUserId,
-    accountType:req.session.loggedUserType,
-    })
-});
+router.get('/:id', loginController.checkAuthenticated, loginController.checkAdmin, controller.getReservations);
 
 
 

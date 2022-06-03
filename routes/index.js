@@ -28,7 +28,7 @@ router.use('/about', aboutRouter);
 router.use('/eventForm', eventFormRouter);
 router.use('/events', eventsRouter);
 router.use('/controlPanel', controlPanelRouter);
-router.use('/controlPanel/reservations', reservationsRouter);
+router.use('/reservations', reservationsRouter);
 
 // Home page router
 router.get('/', homeController.getPopularEvents);

@@ -319,3 +319,20 @@ exports.updateEvent = function (form, callback) {
     }
     callback(null, true);
 }
+
+exports.getReservations = function (id, callback) {
+    let stmt = sql.prepare("SELECT * FROM reservation WHERE event_id = ?");
+    try {
+        var reservations = stmt.all(id);
+    } catch (err) {
+        callback(err, null);
+    }
+    stmt = sql.prepare("SELECT * FROM event WHERE id = ?");
+    try {
+        var event = stmt.all(id);
+    }
+    catch (err) {
+        callback(err, null);
+    }
+    callback(null, reservations, event[0]);
+}

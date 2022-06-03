@@ -19,7 +19,7 @@ let cost3 = (document.querySelector("#quantity3").value * 0.5 * price).toFixed(2
 let cost33 = document.querySelector("#famtick");
 cost33.innerHTML = cost3 + " €";
 
-let cost4 = (document.querySelector("#quantity4").value * 0.7 * price).toFixed(2);
+let cost4 = (document.querySelector("#quantity4").value * 0.3 * price).toFixed(2);
 
 
 let cost44 = document.querySelector("#spnmtick");
