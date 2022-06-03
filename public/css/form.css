@@ -116,7 +116,7 @@
   }
 
   .price #eventPrice, #price1{
-    display: inline-block;
+    /* display: inline-block; */
     padding-left: 10px;
 
   }
