@@ -19,6 +19,7 @@ exports.getEvents = function (req, res) {
                 style: "events.css",
                 title: "Events",
                 userId: req.session.loggedUserId,
+                accountType:req.session.loggedUserType,
                 events: event
             })
         }
