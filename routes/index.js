@@ -30,7 +30,15 @@ router.use('/controlPanel', controlPanelRouter);
 
 // Home page router
 router.get('/', async (req, res) => {
-    res.render('home', { layout: 'bootstrap', style: "home.css", title: "Home", script: "home.js" })
+    // console.log(req.session);
+    res.render('home', {
+        layout: 'bootstrap',
+        style: "home.css",
+        title: "Home",
+        script: "home.js",
+        userId: req.session.loggedUserId,
+        accountType: req.session.loggedUserType
+    })
 });
 
 router.get('*', function (req, res) {

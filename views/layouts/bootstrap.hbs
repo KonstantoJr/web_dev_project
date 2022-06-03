@@ -1,46 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <title>Task list</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="/css/navbar.css">
-        <link rel="stylesheet" href="/css/{{style}}">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <title>Task list</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/{{style}}">
+</head>
 
-    <body>
-         <ul class="topnav">
-    <li><a class=" active" href="/">Home</a> </li>
-    <li><a href="/events">Events</a> </li>
-    <li><a href="#contact">Contact</a> </li>
-    <li><a href="/about">About</a> </li>
-    <li class="right">{{#if userId}}
-                        <a href="/login/logout">Αποσύνδεση</a>
-                    {{else}}
-                        <a href="/login">Είσοδος</a>
-                    {{/if}} </li>
-            </ul>
-            {{#if admin}}
+<body>
+    <ul class="topnav">
+        <li><a class=" active" href="/">Home</a> </li>
+        <li><a href="/events">Events</a> </li>
+        <li><a href="#contact">Contact</a> </li>
+        <li><a href="/about">About</a> </li>
+        {{#strEq accountType "admin"}}
+        <li><a href="/controlPanel">Control Panel</a></li>
+        {{/strEq}}
+        <li class="right">{{#if userId}}
+            <a href="/login/logout">Αποσύνδεση</a>
             {{else}}
-            <div class="container">
-
-                <div class="logo">
-                    <img src="/img/logo.png">
-                    
-                </div>
-
-                <div class="title">
-                    <h1> ΙΣΤΟΣΕΛΙΔΑ ΚΡΑΤΗΣΗΣ ΕΚΔΗΛΩΣΕΩΝ</h1>
-                </div>
-            </div>
+            <a href="/login">Είσοδος</a>
             {{/if}}
-            {{{body}}}
-        
+        </li>
+    </ul>
+    {{#if admin}}
+    {{else}}
+    <div class="container">
 
-  
+        <div class="logo">
+            <img src="/img/logo.png">
 
-    </body>
+        </div>
+
+        <div class="title">
+            <h1> ΙΣΤΟΣΕΛΙΔΑ ΚΡΑΤΗΣΗΣ ΕΚΔΗΛΩΣΕΩΝ</h1>
+        </div>
+    </div>
+    {{/if}}
+    {{{body}}}
+
+
+
+
+</body>
 
 </html>

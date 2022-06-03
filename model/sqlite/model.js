@@ -216,9 +216,9 @@ exports.deleteEvent = function (id, callback) {
 
 
 exports.submitEvent = function (form, callback) {
-    let stmt = sql.prepare("INSERT INTO reservation VALUES (null, ?, null, ?, ?, ?, ?, ?)");
+    let stmt = sql.prepare("INSERT INTO reservation VALUES (null, ?, ?, ?, ?, ?, ?, ?)");
     try {
-        stmt.run(form.id, form.name, form.phone, form.seats, form.email, form.userId);
+        stmt.run(form.id, form.date, form.name, form.phone, form.seats, form.email, form.userId);
     } catch (err) {
         callback(err, null);
     }

@@ -26,7 +26,7 @@ DROP TABLE IF EXISTS `reservation`;
 CREATE TABLE 'reservation'(
     'id' INTEGER PRIMARY KEY AUTOINCREMENT,
     'event_id' INTEGER NOT NULL,
-    'date' TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    'date' DATE DEFAULT CURRENT_TIMESTAMP,
     'name' TEXT NOT NULL,
     'phone' TEXT NOT NULL,
     'number_of_seats' TEXT NOT NULL,
