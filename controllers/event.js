@@ -13,7 +13,7 @@ exports.getEventById = function (req, res) {
             event.contributor = event.contributor.split(/\n/g);
             // console.log(event.description);
             res.render('event', {
-                layout: 'main',
+                layout: 'bootstrap',
                 style: "event.css",
                 userId: req.session.loggedUserId,
                 title: event.name,

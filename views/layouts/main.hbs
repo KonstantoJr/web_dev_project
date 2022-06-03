@@ -16,15 +16,34 @@
   <ul class="topnav">
     <li><a class=" active" href="/">Home</a> </li>
     <li><a href="/events">Events</a> </li>
-    <li><a href="#contact">Contact</a> </li>
-    <li><a href="#about">About</a> </li>
+    <li><a href="/contact">Contact</a> </li>
+    <li><a href="/about">About</a> </li>
     <li class="right">{{#if userId}}
                         <a href="/login/logout">Αποσύνδεση</a>
                     {{else}}
                         <a href="/login">Είσοδος</a>
                     {{/if}} </li>
             </ul>
+
+
+    <div class="container">
+
+        <div class="logo">
+            <img src="/img/logo.png">
+            
+        </div>
+
+        <div class="title">
+            <h1> ΙΣΤΟΣΕΛΙΔΑ ΚΡΑΤΗΣΗΣ ΕΚΔΗΛΩΣΕΩΝ</h1>
+        </div>
+
+      </div>
+      
   {{{body}}}
+
+  
+
+
 </body>
 
 </html>
