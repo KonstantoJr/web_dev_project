@@ -1,4 +1,3 @@
-const passport = require('passport');
 const express = require('express');
 const controller = require('../controllers/about');
 
@@ -11,7 +10,8 @@ router.use((req, res, next) => {
 
 router.get('/', async (req, res) => {
     // console.log(req.session)
-    res.render('about', { layout: 'main', style: "about.css", title: "About", script: "about.js"})});
+    res.render('about', { layout: 'main', style: "about.css", title: "About", script: "about.js" })
+});
 
 
 

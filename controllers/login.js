@@ -118,6 +118,16 @@ exports.checkAuthenticated = function (req, res, next) {
     }
 }
 
+exports.checkUser = function (req, res, next) {
+    if (req.session.loggedUserType === "user") {
+        next();
+    }
+    else {
+        errorMessage = { message: "Πρέπει να είστε απλός χρήστης για να κάνετε κράτηση" };
+        res.render('login', { layout: 'main', style: "login.css", title: "Login", script: "login.js", loginError: errorMessage });
+    }
+}
+
 exports.checkAdmin = function (req, res, next) {
     // console.log(req.session)
     if (req.session.loggedUserType === 'admin') {

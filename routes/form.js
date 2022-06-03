@@ -9,6 +9,7 @@ router.use((req, res, next) => {
 });
 
 
-router.get('/', authenticationController.checkAuthenticated, controller.goToForm);
+router.get('/', authenticationController.checkUser, controller.goToForm);
+router.get('/:id', authenticationController.checkUser, controller.goToFormById);
 
 module.exports = router;
