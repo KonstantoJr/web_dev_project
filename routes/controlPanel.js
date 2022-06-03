@@ -11,6 +11,6 @@ router.get('/', loginController.checkAuthenticated, loginController.checkAdmin, 
 router.get('/delete/:id', loginController.checkAuthenticated, loginController.checkAdmin, controller.deleteEvent);
 router.get('/edit/:id', loginController.checkAuthenticated, loginController.checkAdmin, controller.getEditById);
 router.get('/reservations/:id', loginController.checkAuthenticated, loginController.checkAdmin, controller.getReservationsById);
-router.post('/edit/:id', loginController.checkAuthenticated, loginController.checkAdmin, controller.editEvent);
+router.post('/update/:id', loginController.checkAuthenticated, loginController.checkAdmin, controller.updateEvent);
 
 module.exports = router;

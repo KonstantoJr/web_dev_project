@@ -175,7 +175,7 @@ var eventImg = ["https://www.viva.gr/tickets/getattachment/c7fceeb3-d36c-4fd2-bd
 var eventContributor = [contributors1, contributors2, contributors3, contributors4, contributors4];
 var eventPrice = [15, 20, 18, 13, 10];
 var eventPhone = ["2610123456", "2610123456", "2610123456", "2610123456", "2610123456",];
-var eventPlace = ["Royal Theater", "Act Theater", "National Theater", "Crete Theater","Royal Theater" ]
+var eventPlace = ["Royal Theater", "Act Theater", "National Theater", "Crete Theater", "Royal Theater"]
 
 
 
