@@ -108,6 +108,7 @@ li {
     flex: 0 0 100%;
     width: 100%;
     background-color: #f99;
+
     counter-increment: item;
 }
 
@@ -133,6 +134,25 @@ li {
     height: 100%;
     scroll-snap-align: center;
 }
+
+
+.carouselImage {
+    width: 100%;
+    padding: 5px;
+}
+.carouselImage p{
+    width: 100%;
+    text-align: center;
+    font-size: larger;
+    font-weight: bolder;
+
+}
+.carouselImage #myImg{
+    width: 100%;
+    /* margin-top: 4rem; */
+    max-height: 25.5rem;
+}
+
 
 @media (hover: hover) {
     .carousel__snapper {
