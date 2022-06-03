@@ -8,16 +8,21 @@
 
     <div class="Details">
     <label id="eventDetails">Έχετε επιλέξει κράτηση για την παράσταση " </label>
-    <label id="eventTitle"> Ο άρχοντας των δαχτυλιδιών </label>
+    <label id="eventTitle"> {{eventTitle}}</label>
     <label id="eventDetails">" </label>
     <br>
     <div class="date">
     <label id="date"><b>Ημερομηνία: </b></label>
-    <input type="date" id="eventDate" >
+    {{!-- <input type="date" id="eventDate" > --}}
+    <label id="eventDate">{{eventDate}}</label>
     </div>
     <div class="time">
     <label id="time"><b>Ώρα εναρξης:  </b></label>
-    <label id="eventTime">21:30</label>
+    <label id="eventTime">{{eventTime}}</label>
+    </div>
+    <div class="ticketprice">
+    <label id="ticketprice"><b>Τιμή εισητηρίου:  </b></label>
+    <label id="eventTime">{{eventPrice}}</label>
     </div>
     
     
@@ -35,22 +40,56 @@
     <label for="Phone"><b>Τηλέφωνο</b></label>
     <input type="text" placeholder="Enter your phone" name="phone" required>
 
-    <div class="ticket">
-    <label for="ticket"><b>Εισητήριο</b></label>
-    <select class="ticket_type">
-    <option value="0">Κανονικό</option>
+    <div class="tickets">
+      <table class="tick">
+  <tr>
+    <th>Τύπος Εισητήριου</th>
+    <th>Πλήθος</th>
+    <th>Κόστος</th>
+  </tr>
+  <tr>
+    <td>Κανονικό Εισητήριο:</td>
+    <td><input type="number" id="quantity1" name="kanonika" min="0" max="5" value="0"></td>
+    <td id="normtick" ></td>
+  </tr>
+  <tr>
+    <td>Φοιτητικό Εισητήριο:</td>
+    
+    <td><input type="number" id="quantity2" name="foititika" min="0" max="5" value="0"></td>
+    <td id="stdtick"></td>
+  </tr>
+  <tr>
+    <td>Εισητήριο για πολύτεκνους</td>
+    <td><input type="number" id="quantity3" name="polytekna" min="0" max="5" value="0"></td>
+    <td id="famtick"></td>
+  </tr>
+  <tr>
+    <td>Εισητήριο για Α.Μ.Ε.Α:</td>
+    <td><input type="number" id="quantity4" name="eidanagkes" min="0" max="5" value="0"></td>
+    <td id="spnmtick"></td>
+  </tr>
+</table>
+{{!-- 
+    <label for="ticket"><b>Εισητήριο:</b> <option value="0">Κανονικό</option> </label>     
+    <label for="ticket"><b>Εισητήριο:</b></label>
     <option value="1">Φοιτητικό</option>
+    <label for="ticket"><b>Εισητήριο:</b></label>
     <option value="2">Πολύτεκνο</option>
+    <label for="ticket"><b>Εισητήριο:</b></label>
     <option value="3">Άτομα αμε ειδικές ανάγκες</option>
-    </select>
+     --}}
     </div>
 
     <div class="price">
-    <label id="price"><b>Τιμή: </b></label>
-    <label id="eventPrice"><b> 30€</b></label>
+    <button id="btnPrice"> Υπολογισμός Τιμής</button>
+    <label id="price1"><b>Συνολική Τιμή: </b></label>
+    <label id="eventPrice"><b><p id="totalprice"> 30 </p> </b></label>
     </div>
 
     <button type="submit" class="btn">Ολοκλήρωση Κράτησης</button>
     <button type="button" class="btn cancel" onclick="closeForm()"> Ακύρωση</button>
   </form>
 </div>
+
+
+<script src="/src/form.js"></script>
