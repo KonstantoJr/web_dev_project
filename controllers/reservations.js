@@ -19,7 +19,7 @@ exports.getReservations = function (req, res) {
                     price += parseInt(seats[j].split(':')[1]) * priceRatios[j] * event.price
                 }
                 reservations[i].tickets = curSeats;
-                reservations[i].price = price;
+                reservations[i].price = price + " €";
             }
             // console.log(reservations);
             // console.log(event);
