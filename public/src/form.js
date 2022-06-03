@@ -1,22 +1,25 @@
-let cost1= (document.querySelector("#quantity1").value * 1).toFixed(2);
+const price = parseFloat(document.getElementById('eventPrice').textContent.split(" ")[0]);
+
+
+let cost1 = (document.querySelector("#quantity1").value * 1 * price).toFixed(2);
 
 
 let cost11 = document.querySelector("#normtick");
 cost11.innerHTML = cost1 + " €";
 
-let cost2 = (document.querySelector("#quantity2").value * 0.5).toFixed(2);
+let cost2 = (document.querySelector("#quantity2").value * 0.5 * price).toFixed(2);
 
 
 let cost22 = document.querySelector("#stdtick");
 cost22.innerHTML = cost2 + " €";
 
-let cost3 = (document.querySelector("#quantity3").value * 0.5).toFixed(2);
+let cost3 = (document.querySelector("#quantity3").value * 0.5 * price).toFixed(2);
 
 
 let cost33 = document.querySelector("#famtick");
 cost33.innerHTML = cost3 + " €";
 
-let cost4 = (document.querySelector("#quantity4").value * 0.7).toFixed(2);
+let cost4 = (document.querySelector("#quantity4").value * 0.7 * price).toFixed(2);
 
 
 let cost44 = document.querySelector("#spnmtick");
