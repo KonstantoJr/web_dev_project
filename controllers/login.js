@@ -51,6 +51,8 @@ exports.doLogin = function (req, res) {
             if (match) {
                 req.session.loggedUserId = result.id;
                 req.session.loggedUserType = result.accountType;
+                req.flash('error', "");
+                req.flash('success', "");
                 res.redirect('/controlPanel');
                 // res.render('home', {
                 //     layout: 'main',
@@ -76,6 +78,8 @@ exports.doLogin = function (req, res) {
             if (match) {
                 req.session.loggedUserId = result.id;
                 req.session.loggedUserType = result.accountType;
+                req.flash('error', "");
+                req.flash('success', "");
                 // console.log(req.session);
                 res.redirect('/');
                 // res.render('home', {

@@ -107,7 +107,7 @@
   outline: none;
 }
 
-.form-container input[type=phone] {
+.form-container input[type=tel] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 20px 0;
@@ -116,7 +116,7 @@
 }
 
 /* When the inputs get focus, do something */
-.form-container input[type=phone]:focus {
+.form-container input[type=tel]:focus {
   background-color: #ddd;
   outline: none;
 }

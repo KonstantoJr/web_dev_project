@@ -80,7 +80,7 @@ exports.updateEvent = function (req, res) {
         name: req.body.eventTitle,
         description: req.body.eventDescriptionText,
         seats: req.body.seats,
-        organizer: "Test",
+        organizer: req.body.eventOrganizer,
         duration: req.body.eventDuration,
         admin: req.session.loggedUserId,
         startDate: req.body.eventDate,

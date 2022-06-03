@@ -11,5 +11,5 @@ router.use((req, res, next) => {
 
 // router.get('/', authenticationController.checkUser, controller.goToForm);
 router.get('/:id', authenticationController.checkAuthenticated, authenticationController.checkUser, controller.goToFormById);
-router.post('/submit/:id', authenticationController.checkAuthenticated, authenticationController.checkUser, controller.submitEvent);
+router.post('/submit/:id', authenticationController.checkAuthenticated, authenticationController.checkUser, controller.checkDetails, controller.submitEvent);
 module.exports = router;

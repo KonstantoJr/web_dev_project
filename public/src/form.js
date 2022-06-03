@@ -41,30 +41,21 @@ sum_cost1.innerHTML = sum_cost + " €";
 // });
 
 document.querySelector("input[id='quantity1']").addEventListener("input", () => {
-    location.reload(); 
+    location.reload();
 });
 
 document.querySelector("input[id='quantity2']").addEventListener("input", () => {
-    location.reload(); 
+    location.reload();
 });
 
 document.querySelector("input[id='quantity3']").addEventListener("input", () => {
-    location.reload(); 
+    location.reload();
 });
 
 document.querySelector("input[id='quantity4']").addEventListener("input", () => {
-    location.reload(); 
+    location.reload();
 });
 
 summary = parseFloat(document.querySelector("#totalprice").textContent.split(" ")[0]);
 // console.log(summary);
 
-document.getElementById("submitButton").addEventListener('click', () => {
-    if (summary===0){
-        alert("Πρέπει να επιλέξετε τουλάχιστον ένα εισητήριο")
-    }
-    else{
-        // console.log(document.getElementById("formToSubmit"))
-        // document.getElementById("formToSubmit").submit();
-    }
-})

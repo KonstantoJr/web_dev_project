@@ -23,6 +23,19 @@ let getSeats = function (eventId) {
     return total;
 }
 
+exports.getReamainingSeats = function (eventId, callback) {
+    let closedSeats = getSeats(eventId);
+    const stmt = sql.prepare("SELECT total_seats FROM event WHERE id = ?");
+    let event;
+    try {
+        event = stmt.all(eventId);
+    } catch (err) {
+        callback(err, null);
+    }
+    let remainingSeats = event[0].total_seats - closedSeats;
+    callback(null, remainingSeats);
+}
+
 exports.connect = (callback) => {
     console.log("connecting to database");
     callback(null, true)

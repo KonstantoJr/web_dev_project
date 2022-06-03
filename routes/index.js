@@ -11,7 +11,7 @@ const aboutRouter = require('./about.js');
 const eventFormRouter = require('./eventForm.js');
 const eventsRouter = require('./events.js');
 const controlPanelRouter = require('./controlPanel.js');
-const reservationsRouter =  require('./reservations.js');
+const reservationsRouter = require('./reservations.js');
 
 
 router.use((req, res, next) => {

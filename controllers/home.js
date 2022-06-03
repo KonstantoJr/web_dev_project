@@ -20,6 +20,13 @@ exports.getPopularEvents = function (req, res) {
                 title2: events[1].name,
                 title3: events[2].name
             }
+            if (req.session.loggedUserId) {
+                var success = req.session.flash.success;
+                req.session.flash.success = [];
+            }
+            else {
+                var success = null;
+            }
             res.render('home', {
                 layout: 'bootstrap',
                 style: "home.css",
@@ -27,7 +34,8 @@ exports.getPopularEvents = function (req, res) {
                 script: "home.js",
                 userId: req.session.loggedUserId,
                 accountType: req.session.loggedUserType,
-                event: popular
+                event: popular,
+                success: success
             })
         }
     });

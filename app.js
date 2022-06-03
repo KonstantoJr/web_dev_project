@@ -3,6 +3,7 @@ const handlebars = require('express-handlebars');
 const passport = require('passport');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
+const flash = require('connect-flash');
 
 
 const SQLiteStore = require('connect-sqlite3')(session); // store for sessions
@@ -35,7 +36,7 @@ app.use(session({
     },
     store: new SQLiteStore({ db: 'session.sqlite', dir: './model/sessions' })
 }));
-
+app.use(flash())
 app.engine('hbs', handlebars.engine({
     extname: '.hbs',
     helpers: require('./controllers/helpers.js'),
@@ -46,6 +47,13 @@ app.set('view engine', 'hbs')
 app.set('views', './views')
 
 app.use('/', index_router);
+
+app.use(function (req, res, next) {
+    console.log(req.locals.error_messages);
+    res.locals.success_messages = req.flash('success_messages');
+    res.locals.error_messages = req.flash('error_messages');
+    next();
+});
 
 
 // app.route('/searchText').get((req, res) => {

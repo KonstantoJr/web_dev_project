@@ -38,6 +38,7 @@ npm install pg
 npm install dotenv
 npm install cookie-parser
 npm install connect-sqlite3
+npm install connect-flash
 npm init -y
 ```
 

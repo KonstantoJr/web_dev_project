@@ -1,11 +1,14 @@
 <div class="overlay"></div>
 
-<div class="popup"></div>
-
 <div class="form-popup" id="myForm">
   <form id="formToSubmit" action="/form/submit/{{id}}" class="form-container" method="POST">
-    <h1 style="text-align: center;">Κράτηση</h1>
 
+    <h1 style="text-align: center;">Κράτηση</h1>
+    <div id="error-msg">
+      {{#each error}}
+      <p>{{this}}</p>
+      {{/each}}
+    </div>
     <div class="Details">
       <label id="eventDetails">Έχετε επιλέξει κράτηση για την παράσταση " </label>
       <label id="eventTitle"> {{event.name}}</label>
@@ -35,12 +38,12 @@
 
 
     <label for="email"><b>Email </b></label>
-    <input type="email" placeholder="Enter Email" name="email"  pattern=".+@globex\.com" required>
+    <input type="email" placeholder="Enter Email" name="email" required>
 
     <label for="Phone"><b>Τηλέφωνο</b></label>
-    <input type="phone" placeholder="Enter your phone" name="phone" required>
+    <input type="tel" placeholder="Enter your phone" name="phone" pattern="\d{10}" required>
 
-    <div class="tickets">
+    <div class=" tickets">
       <table class="tick">
         <tr>
           <th>Τύπος Εισητήριου</th>
@@ -54,12 +57,14 @@
         </tr>
         <tr>
           <td>Φοιτητικό Εισητήριο:</td>
-          <td class="ticketInput2"><input type="number" id="quantity2" name="foititika" min="0" max="4" value="0"></td>
+          <td class="ticketInput2"><input type="number" id="quantity2" name="foititika" min="0" max="4" value="0">
+          </td>
           <td id="stdtick"></td>
         </tr>
         <tr>
           <td>Εισητήριο για πολύτεκνους</td>
-          <td class="ticketInput3"><input type="number" id="quantity3" name="polytekna" min="0" max="4" value="0"></td>
+          <td class="ticketInput3"><input type="number" id="quantity3" name="polytekna" min="0" max="4" value="0">
+          </td>
           <td id="famtick"></td>
         </tr>
         <tr>
@@ -98,7 +103,7 @@
       </label>
     </div>
 
-    <button type="button" class="btn" id="submitButton">Ολοκλήρωση Κράτησης</button>
+    <button type="submit" class="btn" id="submitButton">Ολοκλήρωση Κράτησης</button>
     <a href="/event/{{id}}"> <button type="button" class="btn cancel"> Ακύρωση</button> </a>
   </form>
 </div>
