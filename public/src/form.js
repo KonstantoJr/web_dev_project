@@ -65,6 +65,6 @@ document.getElementById("submitButton").addEventListener('click', () => {
     }
     else{
         // console.log(document.getElementById("formToSubmit"))
-        document.getElementById("formToSubmit").submit();
+        // document.getElementById("formToSubmit").submit();
     }
 })
