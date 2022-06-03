@@ -13,6 +13,7 @@ CREATE TABLE 'event'(
     'contributor' TEXT NOT NULL,
     'price'  INTEGER NOT NULL,
     'phone' TEXT NOT NULL,
+    'location' TEXT NOT NULL,
     FOREIGN KEY('admin_id') REFERENCES 'admin'('id') ON DELETE CASCADE
 );
 DROP TABLE IF EXISTS `admin`;
