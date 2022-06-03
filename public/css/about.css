@@ -1,5 +1,21 @@
+.container {
+    background-color: rgb(250, 235, 215);
+    margin-bottom: 50px;
+}
+
+
+#subtitle {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#description {
+    margin-top: 15px;
+    margin-left: 50px;
+}
+
 .userChoice dl {
-    display: block;
+    display: inline-block;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
@@ -18,6 +34,11 @@
     border-right: 3px solid rgb(0, 0, 0);
     opacity: 0.7;
     font-weight: bold;
+    /* margin-left: 100px; */
+    
+}
+#adminActions dd{
+    margin-left: 20px;
 }
 
 .userChoice dt:hover{
@@ -33,10 +54,17 @@
 
 .placeholder_information {
   margin-left: 35px;
+  padding-bottom: 10px;
 }
 
+.choices {
+    display: list-item;
+    margin-left: 70px;
+}
+
+
 #adminActions {
-  display: block;
+  display: none;
   
 
  
@@ -44,7 +72,7 @@
 }
 
 #userActions {
-  display: None;
+  display: none;
  
  
 }

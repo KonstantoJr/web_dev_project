@@ -1,11 +1,12 @@
- /* .container {
-    display: block;
+ .container {
+    /* display: block;
     width: 100vw;
     height: 350px;
     position: absolute;
-    top: 80px;
+    top: 80px; */
+    background-color: rgb(250, 235, 215);
 
-}  */
+} 
 .logo {
     display: inline-block;
     margin-top: 10px;
@@ -14,13 +15,13 @@
 .title {
     display: inline-block;
     margin-top: 10px;
-    /* background-color: #99f; */
+    /* background-color: rgb(250, 235, 215); */
     padding: 3px;
     position: absolute;
-    margin-right: 70%;
-    margin-left: 13%;
+    margin-right: 60%;
+    margin-left: 4%;
     margin-right: 20px;
-    margin-top: 4%;
+    margin-top: 5%;
 }
 
 /* @media screen and (max-width: 550px) {
