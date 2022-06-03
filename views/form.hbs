@@ -3,7 +3,7 @@
 <div class="popup"></div>
 
 <div class="form-popup" id="myForm">
-  <form action="/form/submit{{event.id}}" class="form-container" method="POST">
+  <form id="formToSubmit" action="/form/submit{{event.id}}" class="form-container" method="POST">
     <h1 style="text-align: center;">Κράτηση</h1>
 
     <div class="Details">
@@ -83,14 +83,14 @@
     </div>
 
     <div class="price">
-      <button id="btnPrice"> Υπολογισμός Τιμής</button>
+      {{!-- <button id="btnPrice"> Υπολογισμός Τιμής</button> --}}
       <label id="price1"><b>Συνολική Τιμή: </b></label>
       <label id="eventPrice"><b>
           <p id="totalprice"></p>
         </b></label>
     </div>
 
-    <button type="submit" class="btn">Ολοκλήρωση Κράτησης</button>
+    <button type="button" class="btn" id="submitButton">Ολοκλήρωση Κράτησης</button>
     <button type="button" class="btn cancel" onclick="closeForm()"> Ακύρωση</button>
   </form>
 </div>
