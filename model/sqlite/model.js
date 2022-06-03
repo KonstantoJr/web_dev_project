@@ -247,3 +247,13 @@ exports.submitEvent = function (form, callback) {
     }
     callback(null, true);
 }
+
+exports.getPopularEvents = function (callback) {
+    let stmt = sql.prepare("SELECT * FROM event ORDER BY id  LIMIT 0, 3");
+    try {
+        let events = stmt.all();
+        callback(null, events);
+    } catch (err) {
+        callback(err, null);
+    }
+}
