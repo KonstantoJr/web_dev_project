@@ -31,7 +31,7 @@ router.use('/controlPanel', controlPanelRouter);
 // Home page router
 router.get('/', async (req, res) => {
     // console.log(req.session);
-    res.render('home', { layout: 'main', style: "home.css", title: "Home", script: "home.js", userId: req.session.loggedUserId })
+    res.render('home', { layout: 'bootstrap', style: "home.css", title: "Home", script: "home.js", userId: req.session.loggedUserId })
 });
 
 router.get('*', function (req, res) {

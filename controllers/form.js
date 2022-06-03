@@ -17,7 +17,7 @@ exports.goToFormById = function (req, res) {
             event = event[0];
             // console.log(event);
             res.render('form', {
-                layout: 'main',
+                layout: 'bootstrap',
                 style: "form.css",
                 title: "Form",
                 script: "form.js",

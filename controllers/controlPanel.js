@@ -20,7 +20,8 @@ exports.getEventsByAdminId = function (req, res) {
                 style: "controlPanel.css",
                 title: "ControlPanel",
                 userId: req.session.loggedUserId,
-                events: event
+                events: event,
+                admin: 'exists'
             })
         }
     });
