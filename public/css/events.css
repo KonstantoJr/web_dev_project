@@ -25,7 +25,7 @@
     max-height: 210px;
     max-width: 18vw;
     
-    border: 2px solid black;
+    /* border: 2px solid black; */
     width: 18vw;
     /* height: 100%; */
 }
@@ -43,7 +43,7 @@
     margin-top: 5px; */
     /* background-color: beige; */
     color: black;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     /* position: relative; */
     /* top: 35px; */
 }
