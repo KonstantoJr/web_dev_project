@@ -10,7 +10,7 @@
 
       <div class="eventTitle">
         <label id="eventTitle" style="text-align: center;"><b> Τίτλος παράστασης </b </label>
-          <input type="text" name="eventTitle" required>
+          <input type="text" placeholder="Τίτλος Παράστασης" name="eventTitle" required>
       </div>
 
       <div class="eventLocation">
@@ -40,10 +40,14 @@
         <label id="duration"><b>Διάρκεια (σε λεπτά) </b></label>
         <input type="text" placeholder="240" name="eventDuration" required>
       </div>
+      <div class="eventOrganizer">
+        <label id="organizer"><b>Διοργανωτής</b></label>
+        <input type="text" placeholder="Διοργανωτής" name="eventOrganizer" required>
+      </div>
 
       <div class="eventImg">
         <label id="eventImg"><b>Προσθήκη Εικόνας (url) </b></label>
-        <input type="text" name="image">
+        <input type="text" placeholder="Γράψτε το url της εικόνας που θέλετε"name="image">
       </div>
 
       <div class="eventPhone">
@@ -59,14 +63,14 @@
       <div class="eventDescription">
         <label for="eventDescriptionText"><b>Περιγραφή</b></label>
         {{!-- <input type="text" name="name" required> --}}
-        <textarea name="eventDescriptionText" id="eventDescriptionText"></textarea>
+        <textarea name="eventDescriptionText" id="eventDescriptionText" placeholder="Προσθέστε μια μικρή περιγραφή της παράστασης"></textarea>
 
       </div>
 
       <div class="eventPeople">
         <label for="eventPeopleText"><b>Συντελεστές</b></label>
         {{!-- <input type="text" name="eventPeople" required>--}}
-        <textarea name="eventPeopleText" id="eventPeopleText"></textarea>
+        <textarea name="eventPeopleText" id="eventPeopleText" placeholder="Προσθέστε τους συντελεστές της παράστασης"></textarea>
 
       </div>
 
