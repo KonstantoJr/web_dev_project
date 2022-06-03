@@ -9,7 +9,7 @@ router.use((req, res, next) => {
 });
 
 
-router.get('/', authenticationController.checkUser, controller.goToForm);
+// router.get('/', authenticationController.checkUser, controller.goToForm);
 router.get('/:id', authenticationController.checkUser, controller.goToFormById);
-
+router.post('/submit/:id', authenticationController.checkUser, controller.submitEvent);
 module.exports = router;

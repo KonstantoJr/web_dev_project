@@ -29,7 +29,7 @@ CREATE TABLE 'reservation'(
     'date' TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
     'name' TEXT NOT NULL,
     'phone' TEXT NOT NULL,
-    'number_of_seats' INTEGER NOT NULL,
+    'number_of_seats' TEXT NOT NULL,
     'email' TEXT NOT NULL,
     'user_id' INTEGER NOT NULL,
     FOREIGN KEY('event_id') REFERENCES 'event'('id') ON DELETE CASCADE,

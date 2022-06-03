@@ -12,7 +12,7 @@ exports.getEventById = function (req, res) {
             event.organizer = event.organizer.split(/\n/g);
             event.contributor = event.contributor.split(/\n/g);
             // console.log(event.description);
-            console.log(event);
+            // console.log(event);
             res.render('event', {
                 layout: 'bootstrap',
                 style: "event.css",
@@ -25,7 +25,7 @@ exports.getEventById = function (req, res) {
                 eventDescription: event.description,
                 eventCast: event.contributor,
                 eventOrganizer: event.organizer,
-                id:req.params.id,
+                id: req.params.id,
                 eventPrice: event.price,
                 eventPlace: event.location
             })
