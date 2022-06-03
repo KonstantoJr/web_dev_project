@@ -14,7 +14,6 @@ exports.goToFormById = function (req, res) {
             res.status(500).send(err);
         }
         else {
-            event = event[0];
             // console.log(event);
             res.render('form', {
                 layout: 'bootstrap',

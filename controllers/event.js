@@ -7,7 +7,6 @@ exports.getEventById = function (req, res) {
             res.status(500).send(err);
         }
         else {
-            event = event[0]
             event.description = event.description.split(/\n/g);
             event.organizer = event.organizer.split(/\n/g);
             event.contributor = event.contributor.split(/\n/g);
@@ -27,7 +26,10 @@ exports.getEventById = function (req, res) {
                 eventOrganizer: event.organizer,
                 id: req.params.id,
                 eventPrice: event.price,
-                eventPlace: event.location
+                eventPlace: event.location,
+                eventPhone: event.phone,
+                eventTotalSeats: event.total_seats,
+                eventRemainingSeats: event.remaining_seats
             })
         }
     });

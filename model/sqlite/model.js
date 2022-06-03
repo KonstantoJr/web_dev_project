@@ -3,6 +3,25 @@ const db = require('better-sqlite3')
 const bcrypt = require('bcrypt');
 const sql = new db('./model/sqlite/database.sqlite', { fileMustExist: true });
 
+let getSeats = function (eventId) {
+    const stmt = sql.prepare("SELECT number_of_seats FROM reservation WHERE event_id = ?");
+    let seats;
+    try {
+        seats = stmt.all(eventId);
+    } catch (err) {
+        return null
+    }
+    let total = 0;
+    for (let i = 0; i < seats.length; i++) {
+        let reservation = seats[i].number_of_seats.split(";");
+        let sum = 0;
+        for (let j = 0; j < reservation.length; j++) {
+            sum += parseInt(reservation[j].split(':')[1]);
+        }
+        total += sum
+    }
+    return total;
+}
 
 exports.connect = (callback) => {
     console.log("connecting to database");
@@ -10,6 +29,7 @@ exports.connect = (callback) => {
 }
 
 exports.getEventById = function (id, callback) {
+    let closedSeats = getSeats(id);
     const stmt = sql.prepare("SELECT name , description ,total_seats , organizer, duration , start_date , start_time , img , contributor , price , phone, location FROM event WHERE id = ? LIMIT 0, 1");
     let events;
     try {
@@ -17,6 +37,9 @@ exports.getEventById = function (id, callback) {
     } catch (err) {
         callback(err, null);
     }
+    events = events[0];
+    events.remaining_seats = events.total_seats - closedSeats;
+    // console.log(events)
     callback(null, events);
 }
 

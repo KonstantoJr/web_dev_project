@@ -84,10 +84,18 @@
 
     <div class="price">
       {{!-- <button id="btnPrice"> Υπολογισμός Τιμής</button> --}}
-      <label id="price1"><b>Συνολική Τιμή: </b></label>
-      <label id="eventPrice"><b>
+      <label id="price1"><b>Συνολική Τιμή:</b></label>
+      <label id="eventPrice">
+        <b>
           <p id="totalprice"></p>
-        </b></label>
+        </b>
+      </label>
+      <label id="price1"><b>Διαθέσιμες Θέσεις</b></label>
+      <label id="eventSeats">
+        <b>
+          <p id="remainingSeats">{{event.remaining_seats}}</p>
+        </b>
+      </label>
     </div>
 
     <button type="button" class="btn" id="submitButton">Ολοκλήρωση Κράτησης</button>

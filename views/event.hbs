@@ -13,7 +13,8 @@
 
 		</div>
 		<div class="eventReservation">
-			<a href="/form/{{id}}"> <button id="btnreservation" type="button" class="btnReservation">   Κάντε Κράτηση </button> </a>
+			<a href="/form/{{id}}"> <button id="btnreservation" type="button" class="btnReservation"> Κάντε Κράτηση
+				</button> </a>
 		</div>
 	</div>
 
@@ -24,7 +25,7 @@
 
 			<dt id="castCrew"> Συντελεστές </dt>
 			<dt id="organizer"> Διοργανωτής </dt>
-			<dt id="price"> Τιμή </dt>
+			<dt id="price"> Πληροφορίες </dt>
 			<br><br>
 		</dl>
 
@@ -56,10 +57,16 @@
 
 		<div id="price1" class="">
 			<dd>
+				Τηλέφωνο Επικοινωνίας: {{eventPhone}}
+			</dd>
+			<dd>
 				Τιμή εισητηρίου: {{eventPrice}} €
 			</dd>
 			<dd>
-				Διαθέσιμες θέσεις: 
+				Συνολικές θέσεις: {{eventTotalSeats}}
+			</dd>
+			<dd>
+				Διαθέσιμες θέσεις: {{eventRemainingSeats}}
 			</dd>
 		</div>
 
