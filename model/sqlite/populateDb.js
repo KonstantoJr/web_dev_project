@@ -175,13 +175,13 @@ var eventImg = ["https://www.viva.gr/tickets/getattachment/c7fceeb3-d36c-4fd2-bd
 var eventContributor = [contributors1, contributors2, contributors3, contributors4, contributors4];
 var eventPrice = [15, 20, 18, 13, 10];
 var eventPhone = ["2610123456", "2610123456", "2610123456", "2610123456", "2610123456",];
-
+var eventPlace = ["Royal Theater", "Act Theater", "National Theater", "Crete Theater","Royal Theater" ]
 
 
 
 for (let i = 0; i < eventName.length; i++) {
 
-    let stmt = sql.prepare("INSERT INTO event VALUES (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    stmt.run(eventName[i], eventDescription[i], eventTotal_seats[i], eventOrganizer[i], eventDuration[i], eventAdmin_id[i], eventStart_date[i], eventStart_time[i], eventImg[i], eventContributor[i], eventPrice[i], eventPhone[i]);
+    let stmt = sql.prepare("INSERT INTO event VALUES (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    stmt.run(eventName[i], eventDescription[i], eventTotal_seats[i], eventOrganizer[i], eventDuration[i], eventAdmin_id[i], eventStart_date[i], eventStart_time[i], eventImg[i], eventContributor[i], eventPrice[i], eventPhone[i], eventPlace[i]);
 }
 
