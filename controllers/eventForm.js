@@ -17,7 +17,7 @@ exports.submitEvent = function (req, res) {
     // console.log(req.session.loggedUserId);
     form = {
         name: req.body.eventTitle,
-        description: req.body.eventLocation,
+        description: req.body.eventDescriptionText,
         seats: req.body.seats,
         organizer: "Test",
         duration: req.body.eventDuration,

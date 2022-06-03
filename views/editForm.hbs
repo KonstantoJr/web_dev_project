@@ -1,0 +1,86 @@
+<div class="overlay"></div>
+
+<div class="popup"></div>
+
+<div class="eventForm" id="adminForm">
+    <form class="form-container" method="POST" action="/controlPanel/update/{{id}}">
+        <h1 style="text-align: center;">Αλλαγή Παράστασης</h1>
+
+        <div class="Details">
+
+            <div class="eventTitle">
+                <label id="eventTitle" style="text-align: center;"><b> Τίτλος παράστασης </b </label>
+                    <input type="text" name="eventTitle" value="{{event.name}}" required>
+            </div>
+
+            <div class="eventLocation">
+                <label id="eventLocation"><b> Τοποθεσία </b< /label>
+                        <input type="text" placeholder="Τοποθεσία Προβολής" name="eventLocation"
+                            value="{{event.location}}" required>
+            </div>
+            <div class="eventPopulation">
+                <label id="eventPopulation"><b> Αρ. Θέσεων </b< /label>
+                        <input type="text" placeholder="100" name="seats" value="{{event.price}}" required>
+
+            </div>
+
+
+
+            <div class="eventDate">
+                <label id="date"><b>Ημερομηνία </b></label>
+                <br>
+                <input type="date" name="eventDate" value="{{event.start_date}}" required>
+            </div>
+
+            <div class="eventTime">
+                <label id="time"><b>Ώρα εναρξης </b></label>
+                <br>
+                <input type="time" name="eventTime" value="{{event.start_time}}" required>
+            </div>
+            <div class="eventDuration">
+                <label id="duration"><b>Διάρκεια (σε λεπτά) </b></label>
+                <input type="text" placeholder="240" name="eventDuration" value="{{event.duration}}" required>
+            </div>
+
+            <div class="eventImg">
+                <label id="eventImg"><b>Προσθήκη Εικόνας (url) </b></label>
+                <input type="text" name="image" value="{{event.img}}">
+            </div>
+
+            <div class="eventPhone">
+                <label id="Phone"><b>Τηλέφωνο</b></label>
+                <input type="text" id="phone" placeholder="Τηλ. Επικοινωνίας" value="{{event.phone}}" name="phone"
+                    maxlength="10" size="12" required>
+            </div>
+
+            <div class="eventPrice">
+                <label id="price"><b>Τιμή Εισητηρίου: </b></label>
+                <input type="text" placeholder="15€" name="eventPrice" value="{{event.price}}" required>
+            </div>
+
+            <div class="eventDescription">
+                <label for="eventDescriptionText"><b>Περιγραφή</b></label>
+                {{!-- <input type="text" name="name" required> --}}
+                <textarea name="eventDescriptionText" id="eventDescriptionText">
+                    {{event.description}}
+                    </textarea>
+
+            </div>
+
+            <div class="eventPeople">
+                <label for="eventPeopleText"><b>Συντελεστές</b></label>
+                {{!-- <input type="text" name="eventPeople" required>--}}
+                <textarea name="eventPeopleText" id="eventPeopleText">
+                    {{event.contributor}}
+                </textarea>
+
+            </div>
+
+
+
+
+
+            <button type="submit" class="btn">Υποβολή Παράστασης</button>
+            <a href="/controlPanel"><button type="button" class="btn cancel"> Ακύρωση </button></a>
+    </form>
+</div>

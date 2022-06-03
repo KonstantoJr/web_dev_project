@@ -16,6 +16,7 @@ exports.getEventById = function (req, res) {
                 layout: 'bootstrap',
                 style: "event.css",
                 userId: req.session.loggedUserId,
+                accountType: req.session.loggedUserType,
                 title: event.name,
                 eventTitle: event.name,
                 eventDate: event.start_date + "\n" + event.start_time,

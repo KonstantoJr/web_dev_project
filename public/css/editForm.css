@@ -1,0 +1,227 @@
+* {
+  box-sizing: border-box;
+}
+
+.overlay {
+  display: none;
+  opacity: 0;
+  background: rgba(0, 0, 0, .5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vw;
+  z-index: 100;
+  cursor: pointer;
+  transition: opacity .3s;
+}
+
+.popup {
+  display: none;
+  opacity: 0;
+  width: 50vh;
+  height: 50vh;
+  min-width: 300px;
+  min-height: 300px;
+  position: fixed;
+  top: 25vh;
+  left: 40%;
+  z-index: 101;
+  transition: opacity .3s;
+
+  background-color: white;
+  padding: 60px 20px 40px;
+  border-radius: 6px;
+}
+
+.eventForm {
+  display: block;
+  opacity: 1;
+}
+
+.form-container {
+  max-width: 800px;
+  padding: 15px;
+  background-color: rgb(131, 235, 226);
+  position: relative;
+  margin: 13% auto;
+  border: 2px solid red;
+  border-radius: 8%;
+}
+
+.Details {
+  /* background-color: rgb(217, 255, 4); */
+  margin-bottom: 8px;
+  padding-top: 5px;
+}
+
+
+
+.eventTitle {
+  /* background-color: #37ff00; */
+  text-align: center;
+
+
+}
+
+.eventLocation {
+  display: inline-block;
+  /* background-color: bisque; */
+  width: 49.5%;
+  text-align: center;
+  /* padding-left: 5px; */
+  /* padding-right: 5px; */
+}
+
+.eventPopulation {
+  display: inline-block;
+  /* background-color: #d95454; */
+  width: 49.5%;
+  text-align: center;
+  /* padding-left: 5px; */
+  /* padding-right: 5px; */
+}
+
+
+
+.eventDate {
+  display: inline-block;
+  padding-top: 2px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+
+  width: 30%;
+  /* padding-left: 7.5%; */
+  text-align: center;
+  /* background-color: #d95454; */
+
+}
+
+.eventTime {
+  display: inline-block;
+
+  padding-top: 2px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 5x;
+  width: 30%;
+  /* padding-left: 7.5%; */
+  text-align: center;
+  /* background-color: #f1f1f1; */
+}
+
+.eventDuration {
+  display: inline-block;
+  /* background-color: aquamarine; */
+  padding-top: 2px;
+  margin-top: 10px;
+  margin-left: 5px;
+  width: 35%;
+  /* padding-left: 3.75%;
+    padding-right: 3.75%; */
+  text-align: center;
+}
+
+.eventDate input[type=date] {
+  margin: 6px 0 11px 0;
+}
+
+.eventTime input[type=time] {
+  margin: 5px 0 10px 0;
+}
+
+
+
+
+.eventImg {
+  display: inline-block;
+  /* background-color: rgb(126, 3, 108); */
+  margin-top: 10px;
+  width: 59%;
+  text-align: center;
+}
+
+.eventPhone {
+  display: inline-block;
+  /* background-color: rgb(55, 25, 175); */
+  margin-top: 10px;
+  width: 20%;
+  text-align: center;
+}
+
+
+.eventPrice {
+  display: inline-block;
+  /* background-color: #ff0000; */
+  width: 19%;
+  text-align: center;
+}
+
+.eventDescription {
+  margin-top: 20px;
+  padding-top: 5px;
+  /* background-color: #37ff00; */
+  text-align: center;
+}
+
+.eventPeople {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 5px;
+  text-align: center;
+  /* background-color: #37ff00; */
+}
+
+
+
+.eventDescription #eventDescriptionText {
+  width: 100%;
+  height: 200px;
+  resize: vertical;
+}
+
+.eventPeople #eventPeopleText {
+  width: 100%;
+  height: 200px;
+  resize: vertical;
+}
+
+
+
+
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.form-container input[type=text] {
+  width: 95%;
+  padding: 10px;
+  margin: 2px 5px 10px 5px;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #37ff00;
+  color: rgb(0, 0, 0);
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: rgb(255, 0, 0);
+}
+
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
+}

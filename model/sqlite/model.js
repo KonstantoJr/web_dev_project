@@ -282,3 +282,27 @@ exports.newEvent = function (form, callback) {
     }
     callback(null, true);
 }
+
+exports.updateEvent = function (form, callback) {
+    let stmt = sql.prepare("UPDATE event SET name = ?, description = ?, total_seats = ?, organizer = ?, duration = ?, start_date = ?, start_time = ?, img = ?, contributor = ?, price = ?, phone = ?, location = ? WHERE id = ?");
+    try {
+        stmt.run(
+            form.name,
+            form.description,
+            form.seats,
+            form.organizer,
+            form.duration,
+            form.startDate,
+            form.startTime,
+            form.image,
+            form.contributors,
+            form.price,
+            form.phone,
+            form.location,
+            form.id
+        );
+    } catch (err) {
+        callback(err, null);
+    }
+    callback(null, true);
+}
