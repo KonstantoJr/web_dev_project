@@ -1,7 +1,7 @@
 let db = require('../model/sqlite/model');
 
 exports.getEventsByAdminId = function (req, res) {
-    console.log(req.session.loggedUserId);
+    // console.log(req.session.loggedUserId);
     db.getEventsByAdminId(req.session.loggedUserId, function (err, events) {
         if (err) {
             console.log(err);

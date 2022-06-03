@@ -22,7 +22,8 @@ exports.goToFormById = function (req, res) {
                 title: "Form",
                 script: "form.js",
                 event: event,
-                id: req.params.id
+                id: req.params.id,
+                userId: req.session.loggedUserId
             })
         }
     });
@@ -31,14 +32,17 @@ exports.goToFormById = function (req, res) {
 exports.submitEvent = function (req, res) {
     // console.log(req.body);
     // console.log(req.session.loggedUserId);
-    console.log(req.session);
+    // console.log(req.session);
+    let date = new Date();
+    let dateString = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
     form = {
         id: req.params.id,
         name: req.body.name,
         email: req.body.email,
         phone: req.body.phone,
         userId: req.session.loggedUserId,
-        seats: "Normal:" + req.body.kanonika + ";VIP:" + req.body.foititika,
+        date: dateString,
+        seats: "Normal:" + req.body.kanonika + ";Foititika:" + req.body.foititika + ';Poluteknika:' + req.body.polytekna + ';AMEA:' + req.body.eidanagkes
     }
     db.submitEvent(form, function (err, result) {
         if (err) {
@@ -46,7 +50,7 @@ exports.submitEvent = function (req, res) {
             res.status(500).send(err);
         }
         else {
-            res.redirect('/controlPanel');
+            res.redirect('/');
         }
     });
 }
