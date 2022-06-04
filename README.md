@@ -6,31 +6,20 @@ The following repo is a project for the course
 ```
 Students:
 ```
-Konstantopoulos Konstantinos
 Kontos Panagiotis
+Konstantopoulos Konstantinos
 ```
 ## Description
 Website for making reservations at cultural events
 (e.g. theatrical plays, concerts etc.)
 
-
-### To do and questions
-- To do 
-    1. Get ideas from existing sites on how to design it
-    2. Design the db to handle the reservations
-
-- Questions
-    1. Payments?
-    2. In case of cinema do we need a seat selector
-    3. Sort by date or by theme 
+More about the project can be found at docs/report/final-presentation/build/report.pdf
 
 Modules needed to run
 ```
 npm install -g nodemon
 npm install hbs
 npm install bcrypt
-npm install passport
-npm install passport-local
 npm install express
 npm install express-session
 npm install express-handlebars
