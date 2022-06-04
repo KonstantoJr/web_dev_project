@@ -7,7 +7,8 @@ exports.getEventForm = (req, res) => {
         style: "eventForm.css",
         title: "Event Form",
         script: "eventForm.js",
-        userId: req.session.loggedUserId
+        userId: req.session.loggedUserId,
+        accountType: req.session.loggedUserType
     });
 }
 

@@ -10,21 +10,21 @@ function aboutActivation() {
 }
 
 
-window.addEventListener('load', (event) =>{
+window.addEventListener('load', (event) => {
     const url = window.location.href.split('/')
-    const page = url[url.length-1]
+    const page = url[url.length - 1]
     console.log(page)
-    if (page === "about"){
+    if (page === "about") {
         aboutActivation()
     }
-    else if (page === "events"){
+    else if (page === "events") {
         eventsActivation()
     }
-    else if (page === "controlPanel"){
+    else if (page === "controlPanel" || page === "eventForm") {
         home.className = "";
         control.className = "active";
     }
-    else if (page === 'login'){
+    else if (page === 'login') {
         home.className = "";
         signin.className = "active";
     }
