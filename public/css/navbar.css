@@ -24,7 +24,51 @@
     margin-left: 4%;
     margin-right: 20px;
     margin-top: 4%;
+    /* animation-name: titlos;
+    animation-duration: 6s; */
 }
+
+.titleWords{
+    display: inline-block;
+    padding-right: 5px;
+    
+}
+.titleWords{
+    opacity: 1;
+}
+ #w1{
+    animation-name: titlos1;
+    animation-duration: 3s;
+    /* animation-delay: 2s; */
+    /* animation-iteration-count: infinite; */
+    
+}
+#w2{
+    animation-name: titlos2;
+    animation-duration: 3s;
+    /* animation-delay: 2s; */
+    /* animation-iteration-count: infinite; */
+    
+}
+
+#w3{
+    animation-name: titlos3;
+    animation-duration: 3s;
+    /* animation-delay: 2s; */
+    /* animation-iteration-count: infinite; */
+    
+}
+
+#w4{
+    animation-name: titlos4;
+    animation-duration: 3s;
+    /* animation-delay: 2s; */
+    /* animation-iteration-count: infinite; */
+}
+
+
+
+
 
 /* @media screen and (max-width: 550px) {
     .logo {
@@ -170,3 +214,35 @@ ul.topnav li.right {
         padding-left: 0%;
     } */
 }
+
+@keyframes titlos1 {
+    0%   {opacity: 0;}
+    25%  {opacity: 1;}
+    50%  {opacity: 1;}
+    75%  {opacity: 1;}
+    100% {opacity: 1;}
+  }
+
+@keyframes titlos2 {
+    0%   {opacity: 0;}
+    25%  {opacity: 0;}
+    50%  {opacity: 1;}
+    75%  {opacity: 1;}
+    100% {opacity: 1;}
+  }
+
+  @keyframes titlos3 {
+    0%   {opacity: 0;}
+    25%  {opacity: 0;}
+    50%  {opacity: 0;}
+    75%  {opacity: 1;}
+    100% {opacity: 1;}
+  }
+  @keyframes titlos4 {
+    0%   {opacity: 0;}
+    25%  {opacity: 0;}
+    50%  {opacity: 0;}
+    75%  {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
