@@ -11,24 +11,24 @@
 </head>
 
 <body>
-    
+
     <ul id="mymenubar" class="topnav">
-        <li id="home" class="active"><a  href="/">Home</a> </li>
-        <li id="events" class=""><a href="/events">Events</a> </li>
-        <li id="about" class=""><a href="/about">About</a> </li>
+        <li id="home" class="active"><a href="/">Αρχική Σελίδα</a> </li>
+        <li id="events" class=""><a href="/events">Εκδηλώσεις</a> </li>
+        <li id="about" class=""><a href="/about">Πληροφορίες</a> </li>
         {{#strEq accountType "admin"}}
-        <li id='control' class = ''><a href="/controlPanel">Control Panel</a></li>
+        <li id='control' class=''><a href="/controlPanel">Πίνακας Ελέγχου</a></li>
         {{/strEq}}
         <li class="right">{{#if userId}}
             <a href="/login/logout">Αποσύνδεση</a>
             {{else}}
-            <a  href="/login">Είσοδος</a>
+            <a href="/login">Είσοδος</a>
             {{/if}}
         </li>
     </ul>
-    
+
     {{#if admin}}
-    
+
     {{else}}
     <div class="container">
 
@@ -45,10 +45,8 @@
     {{{body}}}
 
 
-<script src="/src/navbar.js"></script>
+    <script src="/src/navbar.js"></script>
 
 </body>
 
 </html>
-
-

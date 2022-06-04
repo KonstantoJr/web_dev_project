@@ -10,7 +10,7 @@ router.use((req, res, next) => {
 
 
 router.get('/', async (req, res) => {
-    console.log(res.statusCode)
+    // console.log(res.statusCode)
     res.render('login', {
         layout: 'main',
         style: "login.css",

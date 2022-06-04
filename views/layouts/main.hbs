@@ -14,11 +14,11 @@
 
 <body>
   <ul class="topnav">
-    <li><a id="home" class="active" href="/">Home</a> </li>
-    <li><a id="events" class="" href="/events">Events</a> </li>
-    <li><a id="about" class="" href="/about">About</a> </li>
+    <li><a id="home" class="active" href="/">Αρχική Σελίδα</a> </li>
+    <li><a id="events" class="" href="/events">Εκδηλώσεις</a> </li>
+    <li><a id="about" class="" href="/about">Πληροφορίες</a> </li>
     {{#strEq accountType "admin"}}
-    <li id='control' class=''><a href="/controlPanel">Control Panel</a></li>
+    <li id='control' class=''><a href="/controlPanel">Πίνακας Ελέγχου</a></li>
     {{/strEq}}
     <li class="right">{{#if userId}}
       <a href="/login/logout">Αποσύνδεση</a>

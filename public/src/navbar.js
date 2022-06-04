@@ -13,7 +13,7 @@ function aboutActivation() {
 window.addEventListener('load', (event) => {
     const url = window.location.href.split('/')
     const page = url[url.length - 1]
-    console.log(page)
+    // console.log(page)
     if (page === "about") {
         aboutActivation()
     }
