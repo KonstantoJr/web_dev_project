@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.4.30)  4 JUN 2022 19:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.4.30)  4 JUN 2022 20:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1672,10 +1672,13 @@ l.316 \end{document}
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+Package rerunfilecheck Warning: File `report.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
 
-Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: AB4F266243FBB1D4259DC3E335704ACB;1089.
+Package rerunfilecheck Info: Checksums for `report.out':
+(rerunfilecheck)             Before: AB4F266243FBB1D4259DC3E335704ACB;1089
+(rerunfilecheck)             After:  60A3326C9454DF24F9557A6F5AC371AA;1089.
  ) 
 Here is how much of TeX's memory you used:
  25390 strings out of 478238

@@ -6,4 +6,4 @@
 \contentsline {subsection}{\numberline {2.2}Υλοποίηση}{2}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Front-end}{3}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Back-end}{8}{subsection.2.4}%
-\contentsline {section}{\numberline {3}Λειτουργία Εφαρμογής}{10}{section.3}%
+\contentsline {section}{\numberline {3}Λειτουργία ΕφαρμογήΣ}{10}{section.3}%
