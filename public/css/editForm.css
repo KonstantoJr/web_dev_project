@@ -2,51 +2,51 @@
   box-sizing: border-box;
 }
 
-.overlay {
+/* .overlay {
   display: none;
-  opacity: 0;
+  opacity: 1;
   background: rgba(0, 0, 0, .5);
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 0; left: 0;
   width: 100vw;
   height: 100vw;
   z-index: 100;
   cursor: pointer;
   transition: opacity .3s;
-}
+} */
 
-.popup {
+/* .popup {
   display: none;
   opacity: 0;
-  width: 50vh;
-  height: 50vh;
+  width: 50vh; height: 50vh;
   min-width: 300px;
   min-height: 300px;
   position: fixed;
-  top: 25vh;
-  left: 40%;
+  top: 25vh; left: 40%;
   z-index: 101;
   transition: opacity .3s;
-
-  background-color: white;
+  background-color:lightyellow;
   padding: 60px 20px 40px;
   border-radius: 6px;
-}
+} */
 
 .eventForm {
   display: block;
   opacity: 1;
+  background-color: lightyellow;
+}
+
+body {
+  background-color: lightyellow;
 }
 
 .form-container {
   max-width: 800px;
   padding: 15px;
-  background-color: rgb(131, 235, 226);
+  background-color: white;
   position: relative;
   margin: 13% auto;
   border: 2px solid red;
-  border-radius: 8%;
 }
 
 .Details {
@@ -135,6 +135,7 @@
 }
 
 
+
 .eventDate input[type=date] {
   margin: 6px 0 11px 0;
 }
@@ -217,24 +218,38 @@
   background: #f1f1f1;
 }
 
-/* Set a style for the submit/login button */
+.eventTitle input[type=text] {
+  width: 97%;
+}
+
 .form-container .btn {
-  background-color: #37ff00;
   color: rgb(0, 0, 0);
+  background-color: white;
   padding: 16px 20px;
+  margin-left: 15%;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 70%;
   margin-bottom: 10px;
-  opacity: 0.8;
+  font-size: xx-large;
+  font-weight: bolder;
+  border-radius: 50px;
 }
+
+
 
 /* Add a red background color to the cancel button */
-.form-container .cancel {
-  background-color: rgb(255, 0, 0);
+.form-container .cancel:hover {
+  background-color: red;
+  color: black;
+
 }
 
-.form-container .btn:hover,
-.open-button:hover {
-  opacity: 1;
+.form-container #submitButton:hover {
+  background-color: #57ff39;
 }
+
+/* .form-container .btn:hover,
+  .open-button:hover  {
+    opacity: 1;
+  } */
