@@ -76,8 +76,8 @@
 .eventDesc #eventDescr {
     width: 100%;
     height: 100%;
-    background-color: aquamarine;
-    font-size: 10px;
+    /* background-color: aquamarine; */
+    font-size: 12px;
     /* width: 60%; */
     resize: none;
  

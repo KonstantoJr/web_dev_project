@@ -1,12 +1,5 @@
  .container {
-    /* display: block;
-    width: 100vw;
-    height: 350px;
-    position: absolute;
-    top: 80px; */
-    /* background-color: rgb(250, 235, 215); */
     background-color: rgb(240, 0, 0);
-    /* padding-left: 15%; */
     max-width: 100%;
     margin-bottom: 20px;
     padding-bottom: 10px;
@@ -67,7 +60,7 @@
 .topnav .active {
     background-color: #2196F3;
     color: white;
-}
+} 
 
 /* Style the input container */
 .topnav .login-container {

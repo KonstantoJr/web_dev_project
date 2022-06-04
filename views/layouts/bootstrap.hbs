@@ -17,12 +17,12 @@
         <li id="events" class=""><a href="/events">Events</a> </li>
         <li id="about" class=""><a href="/about">About</a> </li>
         {{#strEq accountType "admin"}}
-        <li><a href="/controlPanel">Control Panel</a></li>
+        <li id='control' class = ''><a href="/controlPanel">Control Panel</a></li>
         {{/strEq}}
         <li class="right">{{#if userId}}
             <a href="/login/logout">Αποσύνδεση</a>
             {{else}}
-            <a href="/login">Είσοδος</a>
+            <a  href="/login">Είσοδος</a>
             {{/if}}
         </li>
     </ul>
