@@ -172,6 +172,9 @@ body{
   color: black;
   
 }
+.red{
+  color: red;
+}
 
 .form-container #submitButton:hover {
   background-color: #57ff39;
