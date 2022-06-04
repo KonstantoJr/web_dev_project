@@ -2,9 +2,10 @@
     box-sizing: border-box;
 }
 
+
 .event_page {
     display: block;
-    width: 70%;
+    width: 65vw;
     margin-left: auto;
     margin-right: auto;
     background-color: rgb(243, 201, 201);
@@ -13,6 +14,12 @@
     margin-top: 20px;
     margin-bottom: 30px;
     padding: 10px;
+    min-width: 750px;
+
+    /* background-color: rgb(5, 7, 134);
+    border: 2px solid red; */
+    
+    
 }
 
 .img_box {
@@ -158,11 +165,5 @@
 
 
 
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .column_foto, .column_description {
-      width: 100%;
-    }
-  }
 
  

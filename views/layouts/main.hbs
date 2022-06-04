@@ -14,9 +14,9 @@
 
 <body>
   <ul class="topnav">
-    <li><a class=" active" href="/">Home</a> </li>
-    <li><a href="/events">Events</a> </li>
-    <li><a href="/about">About</a> </li>
+    <li><a id="home" class="active" href="/">Home</a> </li>
+    <li><a id="events" class="" href="/events">Events</a> </li>
+    <li><a id="about" class="" href="/about">About</a> </li>
     <li class="right">{{#if userId}}
                         <a href="/login/logout">Αποσύνδεση</a>
                     {{else}}
@@ -42,7 +42,11 @@
 
   
 
+<script src="/src/navbar.js"></script>
 
 </body>
 
 </html>
+
+
+

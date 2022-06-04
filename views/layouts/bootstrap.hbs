@@ -11,10 +11,11 @@
 </head>
 
 <body>
-    <ul class="topnav">
-        <li><a class=" active" href="/">Home</a> </li>
-        <li><a href="/events">Events</a> </li>
-        <li><a href="/about">About</a> </li>
+    
+    <ul id="mymenubar" class="topnav">
+        <li id="home" class="active"><a  href="/">Home</a> </li>
+        <li id="events" class=""><a href="/events">Events</a> </li>
+        <li id="about" class=""><a href="/about">About</a> </li>
         {{#strEq accountType "admin"}}
         <li><a href="/controlPanel">Control Panel</a></li>
         {{/strEq}}
@@ -25,25 +26,29 @@
             {{/if}}
         </li>
     </ul>
+    
     {{#if admin}}
+    
     {{else}}
     <div class="container">
 
         <div class="logo">
-            <img src="/img/logo_bg.png">
+            <img src="/img/logo_red.png">
 
         </div>
 
         <div class="title">
-            <h1> ΙΣΤΟΣΕΛΙΔΑ ΚΡΑΤΗΣΗΣ ΕΚΔΗΛΩΣΕΩΝ</h1>
+            <h1> Νο1 ΣΕΛΙΔΑ ΓΙΑ ΚΡΑΤΗΣΕΙΣ ΕΚΔΗΛΩΣΕΩΝ</h1>
         </div>
     </div>
     {{/if}}
     {{{body}}}
 
 
-
+<script src="/src/navbar.js"></script>
 
 </body>
 
 </html>
+
+
