@@ -10,11 +10,11 @@ exports.getPopularEvents = function (req, res) {
         }
         else {
             let popular = {
-                id:[],
-                img:[],
-                title:[]
+                id: [],
+                img: [],
+                title: []
             }
-            for (let i in events){
+            for (let i in events) {
                 popular.id.push(events[i].id);
                 popular.img.push(events[i].img);
                 popular.title.push(events[i].name)
@@ -26,7 +26,7 @@ exports.getPopularEvents = function (req, res) {
             else {
                 var success = null;
             }
-            console.log(popular)
+            // console.log(popular)
             res.render('home', {
                 layout: 'bootstrap',
                 style: "home.css",
