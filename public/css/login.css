@@ -21,7 +21,7 @@
   width: 400px;
   /* height: 480px; */
   /* width: 25%; */
-  height: 60%;
+  /* height: 20%; */
   position: relative;
   margin: 13% auto;
   background: rgb(40, 126, 175);
@@ -29,6 +29,7 @@
   overflow: hidden;
   border-radius: 10%;
   min-height: 420px;
+  margin-bottom: 0px;
 }
 
 .example::-webkit-scrollbar {

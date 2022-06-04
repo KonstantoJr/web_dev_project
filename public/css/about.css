@@ -1,9 +1,13 @@
 .container1 {
-    background-color: rgb(240, 235, 215);
+    /* background-color: rgb(240, 235, 215); */
     margin-bottom: 50px;
+    
 }
 
+body{
+  background-color: rgb(240, 235, 215);
 
+}
 #subtitle {
     margin-top: 20px;
     text-align: center;
