@@ -236,7 +236,9 @@ body {
   border-radius: 50px;
 }
 
-
+.red{
+  color: red;
+}
 
 /* Add a red background color to the cancel button */
 .form-container .cancel:hover {

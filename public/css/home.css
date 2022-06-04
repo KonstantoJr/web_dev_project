@@ -1,9 +1,6 @@
 * {
     box-sizing: border-box;
 }
-
-
-
 .subtitle {
     display: block;
     text-align: center;
@@ -104,7 +101,6 @@ li {
     flex: 0 0 100%;
     width: 100%;
     background-color: #f99;
-
     counter-increment: item;
 }
 
@@ -131,13 +127,6 @@ li {
     scroll-snap-align: center;
 }
 
-/* 
-.carouselImage {
-    min-height: fit-content;
-    width: 100%;
-    padding: 5px;
-    padding-top: 10%
-} */
 
 .carouselImage p {
     width: 100%;

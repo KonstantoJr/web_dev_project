@@ -1,5 +1,6 @@
 <div class="overlay"></div>
 
+
 <div class="popup"></div>
 
 <div class="eventForm" id="adminForm">
@@ -9,54 +10,64 @@
     <div class="Details">
 
       <div class="eventTitle">
-        <label id="eventTitle" style="text-align: center;"><b> Τίτλος παράστασης </b </label>
+        <label id="eventTitle" style="text-align: center;"> <b>Τίτλος παράστασης</b> </label>
+        <span class="red" title="required">*</span>
           <input type="text" placeholder="Τίτλος Παράστασης" name="eventTitle" required>
       </div>
 
       <div class="eventLocation">
-        <label id="eventLocation"><b> Τοποθεσία </b< /label>
+        <label id="eventLocation"><b> Τοποθεσία </b> </label>
+        <span class="red" title="required">*</span>
             <input type="text" placeholder="Τοποθεσία Προβολής" name="eventLocation" required>
       </div>
       <div class="eventPopulation">
-        <label id="eventPopulation"><b> Αρ. Θέσεων </b< /label>
+        <label id="eventPopulation"><b> Αρ. Θέσεων </b> </label>
+        <span class="red" title="required">*</span>
             <input type="text" placeholder="100" name="seats" required>
 
       </div>
 
-
+      
 
       <div class="eventDate">
         <label id="date"><b>Ημερομηνία </b></label>
+        <span class="red" title="required">*</span>
         <br>
-        <input type="date" name="eventDate" required>
+        <input id="dateInput" type="date" name="eventDate" required>
       </div>
 
       <div class="eventTime">
         <label id="time"><b>Ώρα εναρξης </b></label>
+        <span class="red" title="required">*</span>
         <br>
         <input type="time" name="eventTime" required>
       </div>
       <div class="eventDuration">
         <label id="duration"><b>Διάρκεια (σε λεπτά) </b></label>
+        <span class="red" title="required">*</span>
         <input type="text" placeholder="240" name="eventDuration" required>
       </div>
       <div class="eventOrganizer">
         <label id="organizer"><b>Διοργανωτής</b></label>
+        <span class="red" title="required">*</span>
         <input type="text" placeholder="Διοργανωτής" name="eventOrganizer" required>
       </div>
 
       <div class="eventImg">
         <label id="eventImg"><b>Προσθήκη Εικόνας (url) </b></label>
-        <input type="text" placeholder="Γράψτε το url της εικόνας που θέλετε"name="image">
+        <span class="red" title="required">*</span>
+        <input type="text" placeholder="Γράψτε το url της εικόνας που θέλετε" name="image" required>
       </div>
 
       <div class="eventPhone">
         <label id="Phone"><b>Τηλέφωνο</b></label>
+        <span class="red" title="required">*</span>
         <input type="text" id="phone" placeholder="Τηλ. Επικοινωνίας" name="phone" maxlength="10" size="12" required>
       </div>
 
       <div class="eventPrice">
         <label id="price"><b>Τιμή Εισητηρίου: </b></label>
+        <span class="red" title="required">*</span>
         <input type="text" placeholder="15€" name="eventPrice" required>
       </div>
 
@@ -83,3 +94,19 @@
   </form>
 </div>
 
+
+<script>
+      date = new Date();
+      year = date.getFullYear();
+      month = date.getMonth() + 1;
+      day = date.getDate();
+      if(day<10){
+        day="0"+day;
+      }
+      if(month<10){
+        month="0"+month;
+      }
+      var today= year+"-"+month+"-"+day
+      document.getElementById('dateInput').min +=today
+    console.log(today)
+    </script>

@@ -10,16 +10,19 @@
 
             <div class="eventTitle">
                 <label id="eventTitle" style="text-align: center;"><b> Τίτλος παράστασης </b </label>
+                <span class="red" title="required">*</span>
                     <input type="text" name="eventTitle" value="{{event.name}}" required>
             </div>
 
             <div class="eventLocation">
                 <label id="eventLocation"><b> Τοποθεσία </b< /label>
+                <span class="red" title="required">*</span>
                         <input type="text" placeholder="Τοποθεσία Προβολής" name="eventLocation"
                             value="{{event.location}}" required>
             </div>
             <div class="eventPopulation">
                 <label id="eventPopulation"><b> Αρ. Θέσεων </b< /label>
+                <span class="red" title="required">*</span>
                         <input type="text" placeholder="100" name="seats" value="{{event.price}}" required>
 
             </div>
@@ -28,37 +31,44 @@
 
             <div class="eventDate">
                 <label id="date"><b>Ημερομηνία </b></label>
+                <span class="red" title="required">*</span>
                 <br>
-                <input type="date" name="eventDate" value="{{event.start_date}}" required>
+                <input id='dateInput' type="date" name="eventDate" value="{{event.start_date}}" required>
             </div>
 
             <div class="eventTime">
                 <label id="time"><b>Ώρα εναρξης </b></label>
+                <span class="red" title="required">*</span>
                 <br>
                 <input type="time" name="eventTime" value="{{event.start_time}}" required>
             </div>
             <div class="eventDuration">
                 <label id="duration"><b>Διάρκεια (σε λεπτά) </b></label>
+                <span class="red" title="required">*</span>
                 <input type="text" placeholder="240" name="eventDuration" value="{{event.duration}}" required>
             </div>
             <div class="eventOrganizer">
                 <label id="organizer"><b>Διοργανωτής</b></label>
+                <span class="red" title="required">*</span>
                 <input type="text" placeholder="Διοργανωτής" name="eventOrganizer" value="{{event.organizer}}" required>
             </div>
 
             <div class="eventImg">
                 <label id="eventImg"><b>Προσθήκη Εικόνας (url) </b></label>
-                <input type="text" name="image" value="{{event.img}}">
+                <span class="red" title="required">*</span>
+                <input type="text" name="image" value="{{event.img}}" required>
             </div>
 
             <div class="eventPhone">
                 <label id="Phone"><b>Τηλέφωνο</b></label>
+                <span class="red" title="required">*</span>
                 <input type="text" id="phone" placeholder="Τηλ. Επικοινωνίας" value="{{event.phone}}" name="phone"
                     maxlength="10" size="12" required>
             </div>
 
             <div class="eventPrice">
                 <label id="price"><b>Τιμή Εισητηρίου: </b></label>
+                <span class="red" title="required">*</span>
                 <input type="text" placeholder="15€" name="eventPrice" value="{{event.price}}" required>
             </div>
 
@@ -84,7 +94,24 @@
 
 
 
-            <button type="submit" class="btn">Αποθήκευση Παράστασης</button>
+            <button id="submitButton" type="submit" class="btn">Αποθήκευση Παράστασης</button>
             <a href="/controlPanel"><button type="button" class="btn cancel"> Ακύρωση </button></a>
     </form>
 </div>
+
+
+<script>
+      date = new Date();
+      year = date.getFullYear();
+      month = date.getMonth() + 1;
+      day = date.getDate();
+      if(day<10){
+        day="0"+day;
+      }
+      if(month<10){
+        month="0"+month;
+      }
+      var today= year+"-"+month+"-"+day
+      document.getElementById('dateInput').min +=today
+    console.log(today)
+    </script>

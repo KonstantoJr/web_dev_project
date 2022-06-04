@@ -52,7 +52,9 @@ body{
     padding-top: 5px;
   }
 
-
+.red{
+  color: red;
+}
 
   .eventTitle {
       /* background-color: #37ff00; */
