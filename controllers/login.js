@@ -18,11 +18,11 @@ exports.doRegister = function (req, res) {
             res.redirect('/login');
         }
         else if (result.message) {
-            console.log('registration error: ' + result.message);
+            // console.log('registration error: ' + result.message);
             res.render('login', { layout: 'main', style: "login.css", title: "Login", script: "login.js", registerError: { message: result.message } });
         }
         else {
-            console.log('registration successful');
+            // console.log('registration successful');
             res.redirect('/');
         }
     })
@@ -112,7 +112,7 @@ exports.doLogout = (req, res) => {
 exports.checkAuthenticated = function (req, res, next) {
     //Αν η μεταβλητή συνεδρίας έχει τεθεί, τότε ο χρήστης είναι συνεδεμένος
     if (req.session.loggedUserId) {
-        console.log("user is authenticated", req.originalUrl);
+        // console.log("user is authenticated", req.originalUrl);
         //Καλεί τον επόμενο χειριστή (handler) του αιτήματος
         next();
     }
@@ -124,7 +124,7 @@ exports.checkAuthenticated = function (req, res, next) {
         }
         else {
             //Στείλε το χρήστη στη "/login" 
-            console.log("not authenticated, redirecting to /login")
+            // console.log("not authenticated, redirecting to /login")
             errorMessage = { message: "Πρέπει να συνδεθείτε" };
             res.render('login', { layout: 'main', style: "login.css", title: "Login", script: "login.js", loginError: errorMessage });
         }
@@ -147,7 +147,7 @@ exports.checkAdmin = function (req, res, next) {
         next();
     }
     else {
-        console.log("not admin, redirecting to /login");
+        // console.log("not admin, redirecting to /login");
         errorMessage = { message: "Πρέπει να είστε διαχειριστής" };
         // res.location('/login');
         res.redirect('/login').render('login', {
